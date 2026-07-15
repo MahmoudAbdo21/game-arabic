@@ -7,9 +7,8 @@
   z-index: 50;
   overflow-y: auto;
   background-color: #FFF9F0;
-  color: #1f2937; /* gray-800 */
+  color: var(--color-text); /* gray-800 */
   transition: all 700ms;
-  direction: rtl;
 }
 
 .introOverlayLeaving {
@@ -28,8 +27,7 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 10rem; /* h-40 */
-  background-image: linear-gradient(to bottom, #DBEAFE, transparent);
+  background-image: linear-gradient(to bottom, var(--color-intro-bg-light), transparent);
 }
 
 .bottomGradient {
@@ -78,15 +76,13 @@
 
 .eyebrowText {
   font-size: 0.75rem;
-  font-weight: 900; /* font-black */
-  color: #6366F1;
+  color: var(--color-intro-primary);
   margin: 0;
 }
 
 .sceneTitleText {
   font-size: 0.875rem;
-  font-weight: 700;
-  color: #6b7280; /* gray-500 */
+  color: var(--color-intro-text-muted); /* gray-500 */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -104,8 +100,7 @@
 
 .progressBarFill {
   height: 100%;
-  border-radius: 9999px;
-  background-image: linear-gradient(to left, #6366F1, #39BDF8, #FACC15);
+  background-image: linear-gradient(to left, var(--color-intro-primary), #39BDF8, var(--color-gold));
 }
 
 .sceneSection {
@@ -149,14 +144,14 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 900;
-  color: #6366F1;
+  color: var(--color-intro-primary);
 }
 
 .sceneMainTitle {
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1.25;
-  color: #111827; /* gray-900 */
+  color: var(--color-intro-text-dark); /* gray-900 */
   margin: 0;
 }
 @media (min-width: 640px) {
@@ -169,7 +164,7 @@
 .sceneSubtitle {
   font-size: 1rem;
   font-weight: 700;
-  color: #6366F1;
+  color: var(--color-intro-primary);
   margin: 0;
 }
 @media (min-width: 640px) {
@@ -205,7 +200,7 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #6366F1;
+  color: var(--color-intro-primary);
   margin-top: 0;
 }
 
@@ -221,7 +216,7 @@
 .blockLineEmphasis {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #1f2937; /* gray-800 */
+  color: var(--color-text); /* gray-800 */
 }
 @media (min-width: 640px) {
   .blockLineEmphasis { font-size: 1rem; }
@@ -247,7 +242,7 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #6b7280; /* gray-500 */
+  color: var(--color-intro-text-muted); /* gray-500 */
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px #f3f4f6;
 }
 
@@ -319,7 +314,7 @@
   height: 3rem;
   background-color: #ffffff;
   font-weight: 900;
-  color: #6366F1;
+  color: var(--color-intro-primary);
   border: 1px solid #e5e7eb;
 }
 .btnAudio:hover {
@@ -328,14 +323,14 @@
 
 .btnNext {
   height: 3rem;
-  background-image: linear-gradient(to right, #6366F1, #4F46E5);
+  background-image: linear-gradient(to right, var(--color-intro-primary), var(--color-intro-primary-hover));
   font-weight: 900;
   color: #ffffff;
-  box-shadow: 0 5px 0 #4338CA;
+  box-shadow: 0 5px 0 var(--color-intro-primary-hover);
   transition: all 150ms ease;
 }
 .btnNext:hover {
-  background-image: linear-gradient(to right, #5558E3, #4338CA);
+  background-image: linear-gradient(to right, #5558E3, var(--color-intro-primary-hover));
 }
 .btnNext:active {
   transform: translateY(4px);
@@ -392,12 +387,12 @@
   }
 }
 
-.textPrimary { color: var(--color-primary, #10B981); }
-.textSecondary { color: var(--color-secondary, #F59E0B); }
-.textAccent { color: var(--color-accent, #6366F1); }
-.textMint { color: var(--color-mint, #34D399); }
-.textPink { color: var(--color-pink, #EC4899); }
-.textSuccess { color: var(--color-success, #10B981); }
+.textPrimary { color: var(--color-primary); }
+.textSecondary { color: var(--color-text-secondary); }
+.textAccent { color: var(--color-intro-primary); }
+.textMint { color: var(--color-intro-primary-hover); }
+.textPink { color: var(--color-gold); }
+.textSuccess { color: var(--color-journey-success); }
 
 .transcriptPanel {
   background: rgba(255, 255, 255, 0.95);
@@ -411,7 +406,7 @@
 }
 
 .transcriptText {
-  color: #1f2937;
+  color: var(--color-text);
   font-size: 16px;
   line-height: 1.6;
   font-weight: 700;
@@ -419,7 +414,7 @@
 }
 
 .transcriptNote {
-  color: #6b7280;
+  color: var(--color-intro-text-muted);
   font-size: 12px;
   margin-top: 8px;
   margin-bottom: 0;

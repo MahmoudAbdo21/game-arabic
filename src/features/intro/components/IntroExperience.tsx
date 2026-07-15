@@ -279,7 +279,6 @@ export function IntroExperience({ onComplete }: IntroExperienceProps) {
   return (
     <div
       className={`${styles.introOverlay} ${leaving ? styles.introOverlayLeaving : styles.introOverlayActive}`}
-      dir="rtl"
     >
       <div className={styles.topGradient} />
       <div className={styles.bottomGradient} />

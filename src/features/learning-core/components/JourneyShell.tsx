@@ -22,7 +22,7 @@ export function JourneyShell({
   children 
 }: JourneyShellProps) {
   return (
-    <div className={styles.shellContainer} dir="rtl">
+    <div className={styles.shellContainer}>
       <div 
         className={styles.shellBackground} 
         style={{ backgroundImage: `url('/images/islands/${islandId}/story_bg.png')` }}

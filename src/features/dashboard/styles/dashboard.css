@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #FDFCF6 0%, #E6F0ED 100%);
+  background: linear-gradient(180deg, var(--color-dash-bg-top) 0%, var(--color-dash-bg-bottom) 100%);
 }
 
 .dashboard-header {
