@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "lessonId": "lesson-2",
+  "islandId": "island-2",
+  "storyScenes": [
+    {
+      "sceneId": "l2-scene-1",
+      "lessonId": "lesson-2",
+      "order": 1,
+      "title": "صباح أميرة",
+      "narration": "استيقظت أميرة في الصباح، فوجدت أمها وأباها يستعدان لقضاء وقت جميل في الحديقة.",
+      "characters": ["أميرة", "الأم", "الأب"],
+      "location": "غرفة الأسرة",
+      "action": "استيقاظ واستعداد للحديقة",
+      "emotionalTone": "مبهج",
+      "cueIds": ["l2-scene-1-narration"],
+      "imageAssetId": "l2-scene-1-asset",
+      "visual": {
+        "assetId": "l2-scene-1-asset",
+        "imageUrl": "/images/lessons/island-2/story-scene-1.png",
+        "altText": "أميرة تستيقظ وتجد والديها يستعدان",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "nextSceneId": "l2-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 2 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l2-scene-2",
+      "lessonId": "lesson-2",
+      "order": 2,
+      "title": "البطاقات المبعثرة",
+      "narration": "أرادت أميرة أن تساعد أسرتها، لكنها وجدت بطاقات الكلمات والمقاطع مبعثرة في غرف البيت.",
+      "characters": ["أميرة"],
+      "location": "غرفة البيت",
+      "action": "أميرة تجد البطاقات المبعثرة",
+      "emotionalTone": "مندهش",
+      "cueIds": ["l2-scene-2-narration"],
+      "imageAssetId": "l2-scene-2-asset",
+      "visual": {
+        "assetId": "l2-scene-2-asset",
+        "imageUrl": "/images/lessons/island-2/story-scene-2.png",
+        "altText": "أميرة تجد بطاقات مبعثرة في الغرفة",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l2-scene-1",
+      "nextSceneId": "l2-scene-3",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 2 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l2-scene-3",
+      "lessonId": "lesson-2",
+      "order": 3,
+      "title": "نصيحة الأم",
+      "narration": "قالت لها أمها: عندما ترتبين الكلمات وتكتشفين أصواتها، ستفتح لك أبواب البيت واحدًا بعد الآخر.",
+      "characters": ["أميرة", "الأم"],
+      "location": "الصالة",
+      "action": "الأم تنصح أميرة",
+      "emotionalTone": "مشجع",
+      "cueIds": ["l2-scene-3-narration"],
+      "imageAssetId": "l2-scene-3-asset",
+      "visual": {
+        "assetId": "l2-scene-3-asset",
+        "imageUrl": "/images/lessons/island-2/story-scene-3.png",
+        "altText": "الأم تشجع أميرة على ترتيب الكلمات",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l2-scene-2",
+      "nextSceneId": "l2-scene-4",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 2 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l2-scene-4",
+      "lessonId": "lesson-2",
+      "order": 4,
+      "title": "بداية التحدي",
+      "narration": "بدأت أميرة من غرفة الصور، ثم غرفة المقاطع، ثم الحديقة، وكان كل نجاح يجعل منزل الأسرة أكثر إشراقًا وسعادة.",
+      "characters": ["أميرة"],
+      "location": "غرفة الصور / المنزل",
+      "action": "أميرة تبدأ جولة جمع الكلمات",
+      "emotionalTone": "متحمس",
+      "cueIds": ["l2-scene-4-narration"],
+      "imageAssetId": "l2-scene-4-asset",
+      "visual": {
+        "assetId": "l2-scene-4-asset",
+        "imageUrl": "/images/lessons/island-2/story-scene-4.png",
+        "altText": "أميرة تبدأ حل التحديات في غرف المنزل",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l2-scene-3",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 2 - قصة الاستماع" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l2-game-05",
+      "challenges": [
+        {
+          "challengeId": "l2-g05-q01",
+          "visual": {
+            "assetId": "l2-house-asset",
+            "imageUrl": "/images/lessons/island-2/house.png",
+            "altText": "صورة بيت ألوانه مبهجة",
+            "visualRole": "PLACE",
+            "requiredSubject": "بيت",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 1"
+          }
+        },
+        {
+          "challengeId": "l2-g05-q02",
+          "visual": {
+            "assetId": "l2-garden-asset",
+            "imageUrl": "/images/lessons/island-2/garden.png",
+            "altText": "صورة حديقة جميلة",
+            "visualRole": "PLACE",
+            "requiredSubject": "حديقة",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 2"
+          }
+        }
+      ]
+    }
+  ]
+}

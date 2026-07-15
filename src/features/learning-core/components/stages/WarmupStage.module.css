@@ -1,0 +1,157 @@
+.pageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.sceneContainer {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.backgroundLayer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.interactiveArea {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contentPanel {
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: #38bdf8;
+  margin: 0;
+}
+
+.transcriptButton {
+  background-color: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.transcriptButton:hover {
+  background-color: rgba(30, 41, 59, 1);
+}
+
+.textScrollArea {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.textScrollArea::-webkit-scrollbar {
+  width: 6px;
+}
+.textScrollArea::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+}
+.textScrollArea::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.5);
+  border-radius: 3px;
+}
+
+.contentText {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: white;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.skipButton {
+  background-color: transparent;
+  color: #94a3b8;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  transition: all 0.2s ease;
+}
+
+.skipButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.nextButton {
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  color: white;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 900;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 0 0 rgba(3, 105, 161, 1), 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s ease;
+}
+
+.nextButton:hover {
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  box-shadow: 0 4px 0 0 rgba(3, 105, 161, 1), 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+.nextButton:active {
+  background: linear-gradient(to right, #0284c7, #075985);
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

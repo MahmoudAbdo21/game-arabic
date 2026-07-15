@@ -1,0 +1,536 @@
+.profileShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--color-academic-bg);
+  background-image: var(--color-academic-glow);
+  direction: rtl;
+}
+
+.profileHeader {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(16px, 2vw, 24px) clamp(24px, 4vw, 72px);
+  width: 100%;
+}
+
+.btnBack {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(19, 92, 74, 0.08);
+  border-radius: 9999px;
+  padding: 8px 20px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnBack:hover {
+  background: white;
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 2px 8px rgba(19, 92, 74, 0.08);
+}
+
+.profileHeaderCenter {
+  flex: 1;
+  text-align: center;
+}
+
+.profileTitle {
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.profileSubtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--color-text-secondary);
+}
+
+.profileStage {
+  flex: 1;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px clamp(24px, 4vw, 72px) 60px;
+}
+
+.profileSection {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  color: #111827;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.personaGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  width: 100%;
+}
+
+.personaCard {
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  border: 2px solid #FCA5A5;
+  color: #EF4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: scale(0.8);
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.2);
+}
+
+.personaCard:hover .deleteBtn, .personaCard:focus-within .deleteBtn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.deleteBtn:hover {
+  background: #EF4444;
+  color: white;
+  border-color: #EF4444;
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px -1px rgba(239, 68, 68, 0.3);
+}
+
+.deleteIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.personaCard:hover, .personaCard:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(19, 92, 74, 0.1);
+  border-color: var(--color-primary-light);
+  outline: none;
+}
+
+.personaImageWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-academic-bg);
+  margin-bottom: 16px;
+  border: 3px solid var(--color-primary-light);
+}
+
+.personaImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.personaCard:hover .personaImage {
+  transform: scale(1.05);
+}
+
+.personaName {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 4px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.personaRole {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.createCard {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px dashed var(--color-primary-light);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 220px;
+}
+
+.createCard:hover, .createCard:focus-visible {
+  background: white;
+  border-color: var(--color-primary);
+  border-style: solid;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(19, 92, 74, 0.1);
+  outline: none;
+}
+
+.createIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.createCard:hover .createIcon {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.createText {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+/* Modals */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 64, 52, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 32px;
+  padding: 32px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 8px solid var(--color-gold);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalClose {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  border: none;
+  color: var(--color-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modalClose:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.avatarGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.avatarCard {
+  background: var(--color-academic-bg);
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  border-color: var(--color-gold-light);
+}
+
+.avatarImageWrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.avatarName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .profileHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .btnBack {
+    align-self: flex-start;
+  }
+}
+
+/* Dialog */
+.profileDialog {
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 90vw;
+}
+.profileDialog::backdrop {
+  background: rgba(13, 64, 52, 0.6);
+  backdrop-filter: blur(8px);
+}
+.profileDialogContent {
+  background: white;
+  border-radius: 32px;
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  border-top: 8px solid var(--color-gold);
+  animation: slide-up 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  direction: rtl;
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dialogCloseIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--color-primary-light);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.dialogCloseIcon:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.dialogPersonaShowcase {
+  margin-bottom: 32px;
+}
+.dialogImageWrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 4px solid var(--color-gold-light);
+  position: relative;
+}
+.dialogImage { object-fit: cover; }
+.dialogTitle {
+  font-size: 24px;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.dialogTrait {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.dialogForm { margin-bottom: 32px; }
+.dialogLabel {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.dialogInput {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 2px solid var(--color-primary-light);
+  font-size: 18px;
+  font-family: inherit;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.dialogInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(19, 92, 74, 0.1);
+}
+.dialogInputError { border-color: #EF4444; }
+.dialogErrorMsg {
+  color: #EF4444;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.dialogActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Delete Confirmation Modal */
+.deleteConfirmContent {
+  padding: 24px 0;
+}
+
+.deleteWarningIcon {
+  width: 64px;
+  height: 64px;
+  background: #FEF2F2;
+  color: #EF4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.deleteWarningIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.deleteConfirmActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btnConfirmDelete {
+  flex: 1;
+  background: #EF4444;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.2);
+}
+
+.btnConfirmDelete:hover {
+  background: #DC2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(239, 68, 68, 0.3);
+}
+
+.btnCancelDelete {
+  flex: 1;
+  background: var(--color-academic-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-primary-light);
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCancelDelete:hover {
+  background: white;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(19, 92, 74, 0.1);
+}
+

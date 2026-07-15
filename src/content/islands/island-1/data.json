@@ -1,0 +1,699 @@
+{
+  "lessonId": "lesson-01",
+  "islandId": "island-1",
+  "title": "هَيَّا نَتَعَلَّمْ يَا جَدِّي",
+  "activeLevels": 5,
+  "world": "بيت وحديقة وقرية وطريق دراجة ومتجر وحروف سحرية دافئة.",
+  "objectives": [
+    "تمييز الحروف المختلفة والمتشابهة في الصوت.",
+    "تحديد العلاقة بين شكل الحرف وصوته.",
+    "تحديد العلاقة بين اسم الحرف وصوته داخل الكلمة.",
+    "تمييز أصوات الحروف في الكلمات المنطوقة.",
+    "نطق الحروف والكلمات نطقًا صحيحًا والمشاركة في الأنشطة."
+  ],
+  "warmup": {
+    "title": "رسالة الجد المفقودة",
+    "description": "تصل رسالة مصورة من الجد وقد اختفت منها بعض الأصوات. يلمس الطفل ثلاثة أشياء في الحديقة لسماع أو قراءة بداياتها، ثم يفتح بوابة القصة. التمهيد غير محسوب كنقطة، لكنه إلزامي لفتح القصة.",
+    "script": "يا بطل، أرسل لنا جدي رسالة، لكن بعض أصواتها اختفت. ساعد مريم في اكتشاف أصوات الحديقة حتى نفتح الرسالة."
+  },
+  "story": {
+    "title": "مريم تريد أن تساعد أسرتها",
+    "narration": "اسمي مريم وعمري ست سنوات، وأخي يوسف عمره تسع سنوات. كان يوسف دائمًا يساعد أمي وأبي في أشياء عديدة بالبيت، مثل شراء الأكل من المتجر والاعتناء بأشجار الحديقة. كنت دائمًا أفكر في أن أتعلم أشياء أساعد بها أمي وأبي في البيت أيضًا. وفي يوم من الأيام رأيت يوسف وهو يركب دراجته بسرعة ومهارة، وهو ذاهب إلى المتجر ليشتري طلبات البيت. شعرت بالحزن، فأنا أيضًا أريد أن أساعد أمي وأبي.",
+    "presentation": "مشاهد قصيرة: البيت، الحديقة، يوسف يساعد الأسرة، يوسف يقود الدراجة، مريم تنظر بحزن، ثم ظهور الجد كبداية للمغامرة."
+  },
+  "charactersAndWords": [
+    "مَرْيَم",
+    "يُوسُف",
+    "أُمِّي",
+    "أَبِي",
+    "جَدِّي",
+    "بَيْت",
+    "حَدِيقَة",
+    "مَتْجَر",
+    "دَرَّاجَة",
+    "كَرِيم"
+  ],
+  "explanationScenes": [
+    {
+      "sceneId": "l1-exp-01",
+      "title": "رادار الأصوات",
+      "content": "كلمة سِتّ تبدأ بصوت السين الرقيق، وليست بالصاد المفخمة."
+    },
+    {
+      "sceneId": "l1-exp-02",
+      "title": "مصنع الأشكال",
+      "content": "كلمة دَرَّاجَة؛ حرف الدال في أول الكلمة وصوته بالفتحة دَ."
+    },
+    {
+      "sceneId": "l1-exp-03",
+      "title": "بطاقة الهوية",
+      "content": "اسم الحرف مِيم، وصوته في مَتْجَر هو مَ."
+    },
+    {
+      "sceneId": "l1-exp-04",
+      "title": "صائد الأصوات",
+      "content": "صوت الحاء في حَزِينَة يقع في أول الكلمة، والصوت المستهدف حَ."
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l1-game-01",
+      "title": "الحروف المتشابهة صوتيًّا",
+      "mechanic": "IMAGE_TO_WORD_CHOICE",
+      "adventureTreatment": "مرصد الصور والكلمات داخل حديقة الجد؛ تظهر الصورة في بوابة مضيئة وتتحرك بطاقات الكلمات حولها.",
+      "challenges": [
+        {
+          "challengeId": "l1-g01-q01",
+          "instruction": "انظر إلى صورة الدراجة، ثم اختر الكلمة الصحيحة.",
+          "stimulus": "صورة دَرَّاجَة",
+          "choices": [
+            {
+              "choiceId": "l1-g01-q01-c1",
+              "text": "يُوسُف"
+            },
+            {
+              "choiceId": "l1-g01-q01-c2",
+              "text": "مَتْجَر"
+            },
+            {
+              "choiceId": "l1-g01-q01-c3",
+              "text": "دَرَّاجَة"
+            },
+            {
+              "choiceId": "l1-g01-q01-c4",
+              "text": "بَيْت"
+            }
+          ],
+          "correctChoiceTexts": [
+            "دَرَّاجَة"
+          ],
+          "correctFeedback": "رائع! هذه دَرَّاجَة.",
+          "retryFeedback": "حاول مرة أخرى يا بطل، وانظر إلى الصورة جيدًا.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g01-q01-c3"
+          ]
+        },
+        {
+          "challengeId": "l1-g01-q02",
+          "instruction": "انظر إلى صورة يوسف، ثم اختر اسمه الصحيح.",
+          "stimulus": "صورة يُوسُف",
+          "choices": [
+            {
+              "choiceId": "l1-g01-q02-c1",
+              "text": "دَرَّاجَة"
+            },
+            {
+              "choiceId": "l1-g01-q02-c2",
+              "text": "يُوسُف"
+            },
+            {
+              "choiceId": "l1-g01-q02-c3",
+              "text": "مَتْجَر"
+            },
+            {
+              "choiceId": "l1-g01-q02-c4",
+              "text": "جَدِّي"
+            }
+          ],
+          "correctChoiceTexts": [
+            "يُوسُف"
+          ],
+          "correctFeedback": "أحسنت! هذا يُوسُف.",
+          "retryFeedback": "استمع إلى الاسم، ثم حاول مرة أخرى.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g01-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l1-g01-q03",
+          "instruction": "انظر إلى صورة المتجر، ثم اختر الكلمة الصحيحة.",
+          "stimulus": "صورة مَتْجَر",
+          "choices": [
+            {
+              "choiceId": "l1-g01-q03-c1",
+              "text": "يُوسُف"
+            },
+            {
+              "choiceId": "l1-g01-q03-c2",
+              "text": "دَرَّاجَة"
+            },
+            {
+              "choiceId": "l1-g01-q03-c3",
+              "text": "بَيْت"
+            },
+            {
+              "choiceId": "l1-g01-q03-c4",
+              "text": "مَتْجَر"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَتْجَر"
+          ],
+          "correctFeedback": "ممتاز! هذا مَتْجَر.",
+          "retryFeedback": "فكّر في المكان الذي نشتري منه طلبات البيت.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g01-q03-c4"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l1-game-02",
+      "title": "اصطد الكلمة المختلفة",
+      "mechanic": "LISTEN_AND_PICK_DIFFERENT_INITIAL_SOUND",
+      "adventureTreatment": "صياد الأصوات في غابة صغيرة؛ تطير الكلمات ككائنات مضيئة ويصطاد الطفل الكلمة المختلفة.",
+      "challenges": [
+        {
+          "challengeId": "l1-g02-q01",
+          "instruction": "استمع إلى الكلمات: بَاب، حَدِيقَة، بَيْت. اختر الكلمة المختلفة في الصوت الأول.",
+          "stimulus": "بَاب — حَدِيقَة — بَيْت",
+          "choices": [
+            {
+              "choiceId": "l1-g02-q01-c1",
+              "text": "حَدِيقَة"
+            },
+            {
+              "choiceId": "l1-g02-q01-c2",
+              "text": "بَاب"
+            },
+            {
+              "choiceId": "l1-g02-q01-c3",
+              "text": "بَيْت"
+            }
+          ],
+          "correctChoiceTexts": [
+            "حَدِيقَة"
+          ],
+          "correctFeedback": "أحسنت! حَدِيقَة تبدأ بصوت الحاء، بينما بَاب وبَيْت يبدآن بصوت الباء.",
+          "retryFeedback": "استمع إلى أول صوت في كل كلمة، ثم حاول مرة أخرى.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g02-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l1-g02-q02",
+          "instruction": "استمع إلى الكلمات: مَرْيَم، مَتْجَر، يُوسُف. اختر الكلمة المختلفة في الصوت الأول.",
+          "stimulus": "مَرْيَم — مَتْجَر — يُوسُف",
+          "choices": [
+            {
+              "choiceId": "l1-g02-q02-c1",
+              "text": "مَرْيَم"
+            },
+            {
+              "choiceId": "l1-g02-q02-c2",
+              "text": "يُوسُف"
+            },
+            {
+              "choiceId": "l1-g02-q02-c3",
+              "text": "مَتْجَر"
+            }
+          ],
+          "correctChoiceTexts": [
+            "يُوسُف"
+          ],
+          "correctFeedback": "رائع! يُوسُف يبدأ بصوت الياء، بينما مَرْيَم ومَتْجَر يبدآن بصوت الميم.",
+          "retryFeedback": "ركّز في أول صوت في كل كلمة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g02-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l1-g02-q03",
+          "instruction": "استمع إلى الكلمات: دَرَّاجَة، جَدِّي، مَتْجَر. اختر الكلمة التي تبدأ بصوت الميم.",
+          "stimulus": "دَرَّاجَة — جَدِّي — مَتْجَر",
+          "choices": [
+            {
+              "choiceId": "l1-g02-q03-c1",
+              "text": "دَرَّاجَة"
+            },
+            {
+              "choiceId": "l1-g02-q03-c2",
+              "text": "جَدِّي"
+            },
+            {
+              "choiceId": "l1-g02-q03-c3",
+              "text": "مَتْجَر"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَتْجَر"
+          ],
+          "correctFeedback": "ممتاز! مَتْجَر تبدأ بصوت الميم.",
+          "retryFeedback": "أعد الاستماع، وحدد الكلمة التي يبدأ صوتها بالميم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g02-q03-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l1-game-03",
+      "title": "قفزة الحركات الذكية",
+      "mechanic": "CHOOSE_INITIAL_SHORT_VOWEL",
+      "adventureTreatment": "منصات سحرية تحمل الفتحة والضمة والكسرة، ويقفز الحرف إلى المنصة الصحيحة.",
+      "challenges": [
+        {
+          "challengeId": "l1-g03-q01",
+          "instruction": "في كلمة بَيْت، ما حركة الباء في بداية الكلمة؟",
+          "stimulus": "بَيْت",
+          "choices": [
+            {
+              "choiceId": "l1-g03-q01-c1",
+              "text": "الفتحة: بَ"
+            },
+            {
+              "choiceId": "l1-g03-q01-c2",
+              "text": "الضمة: بُ"
+            },
+            {
+              "choiceId": "l1-g03-q01-c3",
+              "text": "الكسرة: بِ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "الفتحة: بَ"
+          ],
+          "correctFeedback": "صحيح! الباء في بَيْت مفتوحة: بَ.",
+          "retryFeedback": "استمع إلى أول صوت: بَـيْت.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g03-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l1-g03-q02",
+          "instruction": "في كلمة يُوسُف، ما حركة الياء في بداية الكلمة؟",
+          "stimulus": "يُوسُف",
+          "choices": [
+            {
+              "choiceId": "l1-g03-q02-c1",
+              "text": "يَ"
+            },
+            {
+              "choiceId": "l1-g03-q02-c2",
+              "text": "يُ"
+            },
+            {
+              "choiceId": "l1-g03-q02-c3",
+              "text": "يِ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "يُ"
+          ],
+          "correctFeedback": "أحسنت! الياء في يُوسُف مضمومة: يُ.",
+          "retryFeedback": "استمع إلى بداية الكلمة: يُـوسُف.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g03-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l1-g03-q03",
+          "instruction": "في كلمة مَتْجَر، ما حركة الميم في بداية الكلمة؟",
+          "stimulus": "مَتْجَر",
+          "choices": [
+            {
+              "choiceId": "l1-g03-q03-c1",
+              "text": "مِ"
+            },
+            {
+              "choiceId": "l1-g03-q03-c2",
+              "text": "مُ"
+            },
+            {
+              "choiceId": "l1-g03-q03-c3",
+              "text": "مَ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَ"
+          ],
+          "correctFeedback": "رائع! الميم في مَتْجَر مفتوحة: مَ.",
+          "retryFeedback": "اسمع أول صوت في الكلمة: مَـتْجَر.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g03-q03-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l1-game-04",
+      "title": "قطار الحروف والمحطات",
+      "mechanic": "LETTER_POSITION_IN_WORD",
+      "adventureTreatment": "قطار حروف يمر بثلاث محطات: أول الكلمة، وسط الكلمة، آخر الكلمة.",
+      "challenges": [
+        {
+          "challengeId": "l1-g04-q01",
+          "instruction": "أين يقع حرف الميم في كلمة أُمِّي؟",
+          "stimulus": "أُمِّي",
+          "choices": [
+            {
+              "choiceId": "l1-g04-q01-c1",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q01-c2",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q01-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "وسط الكلمة"
+          ],
+          "correctFeedback": "صحيح! حرف الميم في وسط كلمة أُمِّي.",
+          "retryFeedback": "انظر إلى ترتيب الحروف في أُمِّي.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g04-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l1-g04-q02",
+          "instruction": "أين يقع حرف الدال في كلمة دَرَّاجَة؟",
+          "stimulus": "دَرَّاجَة",
+          "choices": [
+            {
+              "choiceId": "l1-g04-q02-c1",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q02-c2",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q02-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أول الكلمة"
+          ],
+          "correctFeedback": "أحسنت! حرف الدال في أول كلمة دَرَّاجَة.",
+          "retryFeedback": "انطق الكلمة ببطء: دَ...رَّاجَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g04-q02-c1"
+          ]
+        },
+        {
+          "challengeId": "l1-g04-q03",
+          "instruction": "أين يقع حرف الميم الأخير في كلمة مَرْيَم؟",
+          "stimulus": "مَرْيَم",
+          "choices": [
+            {
+              "choiceId": "l1-g04-q03-c1",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q03-c2",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g04-q03-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "آخر الكلمة"
+          ],
+          "correctFeedback": "رائع! يوجد حرف ميم في آخر كلمة مَرْيَم.",
+          "retryFeedback": "انظر إلى نهاية الكلمة: مَرْيَـم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g04-q03-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l1-game-05",
+      "title": "بستان الحروف",
+      "mechanic": "CLASSIFY_WORD_BY_LETTER_POSITION",
+      "adventureTreatment": "ثلاث شجرات تمثل أول الكلمة ووسطها وآخرها، ويضع الطفل الكلمة عند الشجرة الصحيحة.",
+      "challenges": [
+        {
+          "challengeId": "l1-g05-q01",
+          "instruction": "ضع كلمة مَتْجَر عند الشجرة التي تمثل موضع حرف الميم.",
+          "stimulus": "مَتْجَر",
+          "choices": [
+            {
+              "choiceId": "l1-g05-q01-c1",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q01-c2",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q01-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أول الكلمة"
+          ],
+          "correctFeedback": "صحيح! الميم في أول كلمة مَتْجَر.",
+          "retryFeedback": "انطق أول صوت في مَتْجَر.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g05-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l1-g05-q02",
+          "instruction": "ضع كلمة أُمِّي عند الشجرة التي تمثل موضع حرف الميم.",
+          "stimulus": "أُمِّي",
+          "choices": [
+            {
+              "choiceId": "l1-g05-q02-c1",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q02-c2",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q02-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "وسط الكلمة"
+          ],
+          "correctFeedback": "ممتاز! الميم في وسط كلمة أُمِّي.",
+          "retryFeedback": "تأمل الحروف في أُمِّي.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g05-q02-c1"
+          ]
+        },
+        {
+          "challengeId": "l1-g05-q03",
+          "instruction": "ضع كلمة كَرِيم عند الشجرة التي تمثل موضع حرف الميم.",
+          "stimulus": "كَرِيم",
+          "choices": [
+            {
+              "choiceId": "l1-g05-q03-c1",
+              "text": "وسط الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q03-c2",
+              "text": "أول الكلمة"
+            },
+            {
+              "choiceId": "l1-g05-q03-c3",
+              "text": "آخر الكلمة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "آخر الكلمة"
+          ],
+          "correctFeedback": "أحسنت! الميم في آخر كلمة كَرِيم.",
+          "retryFeedback": "انطق نهاية كلمة كَرِيم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l1-g05-q03-c3"
+          ]
+        }
+      ]
+    }
+  ],
+  "review": "تجمع محطة المراجعة الأسئلة المتخطاة أولًا، ثم الأسئلة الخطأ التي يمكن أن ترفع الدرجة إلى 80% أو أكثر.",
+  "conclusion": "تتعلم مريم المهارات التي تساعدها في قراءة أسماء الأشياء داخل البيت والحديقة، ويمنحها الجد وسام بطل الأصوات، ثم يظهر كأس الجزيرة عند تحقق شروط الإكمال."
+}

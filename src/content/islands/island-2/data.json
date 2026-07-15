@@ -1,0 +1,790 @@
+{
+  "lessonId": "lesson-02",
+  "islandId": "island-2",
+  "title": "أَمِيرَة وَأُسْرَتُهَا السَّعِيدَة",
+  "activeLevels": 7,
+  "world": "منزل عائلي دافئ، ألبوم صور حي، حديقة، غرفة ألعاب، وقطار كلمات يربط الغرف.",
+  "objectives": [
+    "تمييز حركة الحرف الأول.",
+    "عد المقاطع الصوتية في الكلمات.",
+    "ترتيب المقاطع لتكوين كلمة.",
+    "مطابقة الكلمات التي تبدأ بالحرف نفسه.",
+    "ربط الصورة بالكلمة المكتوبة.",
+    "إكمال الكلمة بالحرف الصحيح.",
+    "اكتشاف الكلمة المختلفة في البداية الصوتية."
+  ],
+  "warmup": {
+    "title": "ألبوم الأسرة المضيء",
+    "description": "يفتح الطفل ألبومًا عائليًا، ويضغط على أميرة وأمها وأبيها والبيت والحديقة. كل عنصر يضيء ويعرض اسمه وسكربته. بعد اكتشاف العناصر يفتح مسار القصة.",
+    "script": "مرحبًا يا بطل. تعرف إلى أميرة وأسرتها، ثم ساعدهم في ترتيب يومهم الجميل."
+  },
+  "story": {
+    "title": "يوم الأسرة الجميل",
+    "narration": "استيقظت أميرة في الصباح، فوجدت أمها وأباها يستعدان لقضاء وقت جميل في الحديقة. أرادت أميرة أن تساعد أسرتها، لكنها وجدت بطاقات الكلمات والمقاطع مبعثرة في غرف البيت. قالت لها أمها: عندما ترتبين الكلمات وتكتشفين أصواتها، ستفتح لك أبواب البيت واحدًا بعد الآخر. بدأت أميرة من غرفة الصور، ثم غرفة المقاطع، ثم الحديقة، وكان كل نجاح يجعل منزل الأسرة أكثر إشراقًا وسعادة.",
+    "presentation": "جولة داخل البيت: غرفة الأسرة، ألبوم الصور، غرفة المكعبات، الحديقة، محطة القطار، ثم بوابة الاحتفال."
+  },
+  "charactersAndWords": [
+    "أَمِيرَة",
+    "أُسْرَة",
+    "أُمِّي",
+    "أَبِي",
+    "بَيْت",
+    "حَدِيقَة",
+    "مَرْيَم",
+    "جَدِّي",
+    "يُوسُف"
+  ],
+  "explanationScenes": [
+    {
+      "sceneId": "l2-exp-01",
+      "title": "مصابيح الحركات",
+      "content": "الفتحة والضمة والكسرة في بداية الكلمات."
+    },
+    {
+      "sceneId": "l2-exp-02",
+      "title": "عدسة المقاطع",
+      "content": "تقطيع الكلمة إلى أجزاء صوتية وعدها."
+    },
+    {
+      "sceneId": "l2-exp-03",
+      "title": "ورشة المكعبات",
+      "content": "ترتيب المقاطع من اليمين إلى اليسار لتكوين الكلمة."
+    },
+    {
+      "sceneId": "l2-exp-04",
+      "title": "بوابة البداية",
+      "content": "التعرف إلى الكلمات التي تبدأ بالحرف نفسه."
+    },
+    {
+      "sceneId": "l2-exp-05",
+      "title": "ألبوم الصور",
+      "content": "مطابقة الصورة مع الكلمة الصحيحة."
+    },
+    {
+      "sceneId": "l2-exp-06",
+      "title": "قطار الحرف الناقص",
+      "content": "إكمال الكلمة بالحرف الصحيح."
+    },
+    {
+      "sceneId": "l2-exp-07",
+      "title": "عدسة المختلف",
+      "content": "اكتشاف الكلمة المختلفة في الحرف أو الصوت الأول."
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l2-game-01",
+      "title": "سلة الحركات مع أميرة",
+      "mechanic": "CLASSIFY_INITIAL_SHORT_VOWEL",
+      "adventureTreatment": "ثلاث سلال مضيئة داخل حديقة الأسرة: سلة الفتحة، سلة الضمة، سلة الكسرة.",
+      "challenges": [
+        {
+          "challengeId": "l2-g01-q01",
+          "instruction": "ساعد أميرة في وضع كلمة أَمِيرَة في السلة الصحيحة حسب حركة الحرف الأول.",
+          "stimulus": "أَمِيرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g01-q01-c1",
+              "text": "الفتحة"
+            },
+            {
+              "choiceId": "l2-g01-q01-c2",
+              "text": "الضمة"
+            },
+            {
+              "choiceId": "l2-g01-q01-c3",
+              "text": "الكسرة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "الفتحة"
+          ],
+          "correctFeedback": "ممتاز، كلمة أَمِيرَة تبدأ بهمزة مفتوحة.",
+          "retryFeedback": "اسمع أول صوت في كلمة أَمِيرَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g01-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l2-g01-q02",
+          "instruction": "ضع كلمة أُسْرَة في السلة الصحيحة حسب حركة الحرف الأول.",
+          "stimulus": "أُسْرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g01-q02-c1",
+              "text": "الفتحة"
+            },
+            {
+              "choiceId": "l2-g01-q02-c2",
+              "text": "الضمة"
+            },
+            {
+              "choiceId": "l2-g01-q02-c3",
+              "text": "الكسرة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "الضمة"
+          ],
+          "correctFeedback": "رائع، كلمة أُسْرَة تبدأ بهمزة مضمومة.",
+          "retryFeedback": "ركز يا بطل، كلمة أُسْرَة تبدأ بصوت أُ.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g01-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l2-g01-q03",
+          "instruction": "ضع كلمة حَدِيقَة في السلة الصحيحة حسب حركة الحرف الأول.",
+          "stimulus": "حَدِيقَة",
+          "choices": [
+            {
+              "choiceId": "l2-g01-q03-c1",
+              "text": "الفتحة"
+            },
+            {
+              "choiceId": "l2-g01-q03-c2",
+              "text": "الضمة"
+            },
+            {
+              "choiceId": "l2-g01-q03-c3",
+              "text": "الكسرة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "الفتحة"
+          ],
+          "correctFeedback": "أحسنت، كلمة حَدِيقَة تبدأ بحرف الحاء المفتوح.",
+          "retryFeedback": "اسمع صوت الحرف الأول في كلمة حَدِيقَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g01-q03-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-02",
+      "title": "محقق المقاطع السحرية",
+      "mechanic": "COUNT_SYLLABLE_SEGMENTS",
+      "adventureTreatment": "عدسة محقق تكشف المقاطع الصوتية على بطاقات عائلية متحركة.",
+      "challenges": [
+        {
+          "challengeId": "l2-g02-q01",
+          "instruction": "اضغط على العدد الصحيح لمقاطع كلمة أَمِيرَة.",
+          "stimulus": "أَ | مِيـ | رَ | ة",
+          "choices": [
+            {
+              "choiceId": "l2-g02-q01-c1",
+              "text": "3"
+            },
+            {
+              "choiceId": "l2-g02-q01-c2",
+              "text": "4"
+            },
+            {
+              "choiceId": "l2-g02-q01-c3",
+              "text": "5"
+            }
+          ],
+          "correctChoiceTexts": [
+            "4"
+          ],
+          "correctFeedback": "رائع، كلمة أَمِيرَة تتكون من أربعة مقاطع في هذا النشاط.",
+          "retryFeedback": "عد المقاطع التي أمامك مرة أخرى.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g02-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l2-g02-q02",
+          "instruction": "اضغط على العدد الصحيح لمقاطع كلمة أُسْرَة.",
+          "stimulus": "أُسْـ | رَ | ة",
+          "choices": [
+            {
+              "choiceId": "l2-g02-q02-c1",
+              "text": "2"
+            },
+            {
+              "choiceId": "l2-g02-q02-c2",
+              "text": "3"
+            },
+            {
+              "choiceId": "l2-g02-q02-c3",
+              "text": "4"
+            }
+          ],
+          "correctChoiceTexts": [
+            "3"
+          ],
+          "correctFeedback": "مذهل، كلمة أُسْرَة تتكون من ثلاثة مقاطع في هذا النشاط.",
+          "retryFeedback": "عد المقاطع ببطء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g02-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l2-g02-q03",
+          "instruction": "اضغط على العدد الصحيح لمقاطع كلمة أَبِي.",
+          "stimulus": "أَ | بِي",
+          "choices": [
+            {
+              "choiceId": "l2-g02-q03-c1",
+              "text": "1"
+            },
+            {
+              "choiceId": "l2-g02-q03-c2",
+              "text": "2"
+            },
+            {
+              "choiceId": "l2-g02-q03-c3",
+              "text": "3"
+            }
+          ],
+          "correctChoiceTexts": [
+            "2"
+          ],
+          "correctFeedback": "عبقري، كلمة أَبِي تتكون من مقطعين.",
+          "retryFeedback": "اسمع الكلمة مرة أخرى: أَبِي.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g02-q03-c2"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-03",
+      "title": "مكعبات أميرة السحرية",
+      "mechanic": "ORDER_WORD_SEGMENTS",
+      "adventureTreatment": "مكعبات مضيئة داخل غرفة ألعاب الأسرة، ويعيد الطفل ترتيبها لتكوين الكلمة.",
+      "challenges": [
+        {
+          "challengeId": "l2-g03-q01",
+          "instruction": "رتب مكعبات كلمة أَمِيرَة بالترتيب الصحيح.",
+          "stimulus": "كوّن كلمة أَمِيرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g03-q01-c1",
+              "text": "رَ"
+            },
+            {
+              "choiceId": "l2-g03-q01-c2",
+              "text": "أَ"
+            },
+            {
+              "choiceId": "l2-g03-q01-c3",
+              "text": "ة"
+            },
+            {
+              "choiceId": "l2-g03-q01-c4",
+              "text": "مِيـ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَ",
+            "مِيـ",
+            "رَ",
+            "ة"
+          ],
+          "correctFeedback": "ممتاز، ركبت كلمة أَمِيرَة بنجاح.",
+          "retryFeedback": "رتب المقاطع كما تسمعها في الكلمة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g03-q01-c2",
+            "l2-g03-q01-c4",
+            "l2-g03-q01-c1",
+            "l2-g03-q01-c3"
+          ]
+        },
+        {
+          "challengeId": "l2-g03-q02",
+          "instruction": "رتب مكعبات كلمة أُسْرَة بالترتيب الصحيح.",
+          "stimulus": "كوّن كلمة أُسْرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g03-q02-c1",
+              "text": "رَ"
+            },
+            {
+              "choiceId": "l2-g03-q02-c2",
+              "text": "ة"
+            },
+            {
+              "choiceId": "l2-g03-q02-c3",
+              "text": "أُسْـ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أُسْـ",
+            "رَ",
+            "ة"
+          ],
+          "correctFeedback": "هذه أُسْرَة أميرة السعيدة.",
+          "retryFeedback": "ضع المقاطع بالترتيب الصحيح.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g03-q02-c3",
+            "l2-g03-q02-c1",
+            "l2-g03-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l2-g03-q03",
+          "instruction": "رتب مكعبات كلمة حَدِيقَة بالترتيب الصحيح.",
+          "stimulus": "كوّن كلمة حَدِيقَة",
+          "choices": [
+            {
+              "choiceId": "l2-g03-q03-c1",
+              "text": "قَ"
+            },
+            {
+              "choiceId": "l2-g03-q03-c2",
+              "text": "حَ"
+            },
+            {
+              "choiceId": "l2-g03-q03-c3",
+              "text": "ة"
+            },
+            {
+              "choiceId": "l2-g03-q03-c4",
+              "text": "دِيـ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "حَ",
+            "دِيـ",
+            "قَ",
+            "ة"
+          ],
+          "correctFeedback": "رائع، اكتملت كلمة حَدِيقَة.",
+          "retryFeedback": "ركز في صوت المقاطع.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g03-q03-c2",
+            "l2-g03-q03-c4",
+            "l2-g03-q03-c1",
+            "l2-g03-q03-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-04",
+      "title": "محطة الأصوات المتشابهة",
+      "mechanic": "MATCH_SAME_INITIAL_LETTER",
+      "adventureTreatment": "محطة بالونات عائلية؛ يربط الطفل بين كلمتين لهما الحرف الأول نفسه.",
+      "challenges": [
+        {
+          "challengeId": "l2-g04-q01",
+          "instruction": "أي كلمة تبدأ بالحرف نفسه الذي تبدأ به كلمة أَمِيرَة؟",
+          "stimulus": "أَمِيرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g04-q01-c1",
+              "text": "أُسْرَة"
+            },
+            {
+              "choiceId": "l2-g04-q01-c2",
+              "text": "بَيْت"
+            },
+            {
+              "choiceId": "l2-g04-q01-c3",
+              "text": "حَدِيقَة"
+            },
+            {
+              "choiceId": "l2-g04-q01-c4",
+              "text": "يُوسُف"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أُسْرَة"
+          ],
+          "correctFeedback": "أحسنت، أَمِيرَة وأُسْرَة تبدآن بحرف الألف.",
+          "retryFeedback": "ركز في الحرف الأول في كلمة أَمِيرَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g04-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l2-g04-q02",
+          "instruction": "أي كلمة تبدأ بالحرف نفسه الذي تبدأ به كلمة أُمِّي؟",
+          "stimulus": "أُمِّي",
+          "choices": [
+            {
+              "choiceId": "l2-g04-q02-c1",
+              "text": "مَرْيَم"
+            },
+            {
+              "choiceId": "l2-g04-q02-c2",
+              "text": "جَدِّي"
+            },
+            {
+              "choiceId": "l2-g04-q02-c3",
+              "text": "يُوسُف"
+            },
+            {
+              "choiceId": "l2-g04-q02-c4",
+              "text": "أَبِي"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَبِي"
+          ],
+          "correctFeedback": "رائع، أُمِّي وأَبِي تبدآن بحرف الألف.",
+          "retryFeedback": "اسمع أول صوت في كلمة أُمِّي.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g04-q02-c4"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-05",
+      "title": "صائد الكلمات الصحيحة",
+      "mechanic": "IMAGE_TO_WORD_MATCH",
+      "adventureTreatment": "ألبوم الأسرة الحي؛ تظهر صورة ويختار الطفل البطاقة المكتوبة الصحيحة.",
+      "challenges": [
+        {
+          "challengeId": "l2-g05-q01",
+          "instruction": "انظر إلى صورة البيت، ما الكلمة المناسبة لها؟",
+          "stimulus": "صورة بَيْت",
+          "choices": [
+            {
+              "choiceId": "l2-g05-q01-c1",
+              "text": "أُسْرَة"
+            },
+            {
+              "choiceId": "l2-g05-q01-c2",
+              "text": "حَدِيقَة"
+            },
+            {
+              "choiceId": "l2-g05-q01-c3",
+              "text": "بَيْت"
+            },
+            {
+              "choiceId": "l2-g05-q01-c4",
+              "text": "أُمِّي"
+            }
+          ],
+          "correctChoiceTexts": [
+            "بَيْت"
+          ],
+          "correctFeedback": "ممتاز، هذه كلمة بَيْت.",
+          "retryFeedback": "انظر إلى الصورة جيدًا.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g05-q01-c3"
+          ]
+        },
+        {
+          "challengeId": "l2-g05-q02",
+          "instruction": "انظر إلى صورة الحديقة، ما الكلمة المناسبة لها؟",
+          "stimulus": "صورة حَدِيقَة",
+          "choices": [
+            {
+              "choiceId": "l2-g05-q02-c1",
+              "text": "بَيْت"
+            },
+            {
+              "choiceId": "l2-g05-q02-c2",
+              "text": "أُسْرَة"
+            },
+            {
+              "choiceId": "l2-g05-q02-c3",
+              "text": "حَدِيقَة"
+            },
+            {
+              "choiceId": "l2-g05-q02-c4",
+              "text": "أُمِّي"
+            }
+          ],
+          "correctChoiceTexts": [
+            "حَدِيقَة"
+          ],
+          "correctFeedback": "رائع، هذه حَدِيقَة الأسرة.",
+          "retryFeedback": "الصورة فيها حديقة جميلة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g05-q02-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-06",
+      "title": "محطة قطار الأصوات",
+      "mechanic": "COMPLETE_WORD_WITH_CORRECT_LETTER",
+      "adventureTreatment": "قطار عائلي ينقصه حرف، ويضع الطفل الحرف الصحيح ليكمل الرحلة.",
+      "challenges": [
+        {
+          "challengeId": "l2-g06-q01",
+          "instruction": "اختر الحرف الصحيح لإكمال كلمة أُسْرَة: س أم ص؟",
+          "stimulus": "أُـ...ـرَة",
+          "choices": [
+            {
+              "choiceId": "l2-g06-q01-c1",
+              "text": "س"
+            },
+            {
+              "choiceId": "l2-g06-q01-c2",
+              "text": "ص"
+            }
+          ],
+          "correctChoiceTexts": [
+            "س"
+          ],
+          "correctFeedback": "أحسنت، الحرف الصحيح هو السين: أُسْرَة.",
+          "retryFeedback": "كلمة أُسْرَة تحتاج إلى حرف السين.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g06-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l2-g06-q02",
+          "instruction": "اختر الحرف الصحيح لإكمال كلمة بَيْت: ت أم ط؟",
+          "stimulus": "بَيْـ...",
+          "choices": [
+            {
+              "choiceId": "l2-g06-q02-c1",
+              "text": "ت"
+            },
+            {
+              "choiceId": "l2-g06-q02-c2",
+              "text": "ط"
+            }
+          ],
+          "correctChoiceTexts": [
+            "ت"
+          ],
+          "correctFeedback": "رائع، الحرف الصحيح هو التاء: بَيْت.",
+          "retryFeedback": "آخر صوت في كلمة بَيْت هو التاء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g06-q02-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l2-game-07",
+      "title": "كاشف الكلمة المختلفة",
+      "mechanic": "PICK_DIFFERENT_INITIAL_LETTER",
+      "adventureTreatment": "عدسة سحرية تكشف الكلمة التي لا تنتمي إلى مجموعة البداية الصوتية.",
+      "challenges": [
+        {
+          "challengeId": "l2-g07-q01",
+          "instruction": "اختر الكلمة المختلفة التي لا تبدأ بحرف الألف.",
+          "stimulus": "أَمِيرَة — أُسْرَة — بَيْت",
+          "choices": [
+            {
+              "choiceId": "l2-g07-q01-c1",
+              "text": "أَمِيرَة"
+            },
+            {
+              "choiceId": "l2-g07-q01-c2",
+              "text": "أُسْرَة"
+            },
+            {
+              "choiceId": "l2-g07-q01-c3",
+              "text": "بَيْت"
+            }
+          ],
+          "correctChoiceTexts": [
+            "بَيْت"
+          ],
+          "correctFeedback": "عبقري، بَيْت هي الكلمة المختلفة لأنها تبدأ بحرف الباء.",
+          "retryFeedback": "أَمِيرَة وأُسْرَة تبدآن بحرف الألف.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l2-g07-q01-c3"
+          ]
+        }
+      ]
+    }
+  ],
+  "review": "يظهر البيت كخريطة غرف. الغرف التي تحتوي متخطيات تتوهج بالذهبي، والغرف التي تحتوي إجابات خطأ تظهر بعلامة تدريب.",
+  "conclusion": "تجتمع الأسرة في الحديقة بعد اكتمال التحديات، وتمنح أميرة الطفل وسام صديق الأسرة وكأس الجزيرة عند استيفاء الشروط."
+}

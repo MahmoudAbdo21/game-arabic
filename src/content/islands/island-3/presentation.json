@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "lessonId": "lesson-3",
+  "islandId": "island-3",
+  "storyScenes": [
+    {
+      "sceneId": "l3-scene-1",
+      "lessonId": "lesson-3",
+      "order": 1,
+      "title": "بوابة الغابة",
+      "narration": "وصل المستكشف سامي إلى بوابة الغابة، فوجد الأرنب والنملة والأسد حائرين.",
+      "characters": ["سامي", "الأرنب", "النملة", "الأسد"],
+      "location": "بوابة الغابة",
+      "action": "سامي يقابل الحيوانات",
+      "emotionalTone": "حيرة",
+      "cueIds": ["l3-scene-1-narration"],
+      "imageAssetId": "l3-scene-1-asset",
+      "visual": {
+        "assetId": "l3-scene-1-asset",
+        "imageUrl": "/images/lessons/island-3/story-scene-1.png",
+        "altText": "المستكشف سامي يقف عند بوابة الغابة مع حيوانات حائرة",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "nextSceneId": "l3-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 3 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l3-scene-2",
+      "lessonId": "lesson-3",
+      "order": 2,
+      "title": "الرياح القوية",
+      "narration": "هبت رياح قوية فبعثرت لافتات الأسماء وقطعت الكلمات إلى أجزاء صغيرة.",
+      "characters": [],
+      "location": "الغابة",
+      "action": "رياح تبعثر اللافتات",
+      "emotionalTone": "فوضى",
+      "cueIds": ["l3-scene-2-narration"],
+      "imageAssetId": "l3-scene-2-asset",
+      "visual": {
+        "assetId": "l3-scene-2-asset",
+        "imageUrl": "/images/lessons/island-3/story-scene-2.png",
+        "altText": "رياح قوية تطير باللافتات وتكسر الكلمات",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l3-scene-1",
+      "nextSceneId": "l3-scene-3",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 3 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l3-scene-3",
+      "lessonId": "lesson-3",
+      "order": 3,
+      "title": "طلب المساعدة",
+      "narration": "طلبت الحيوانات من سامي أن يعيد ترتيب المقاطع، ويطابق كل صورة باسمها، حتى تستعيد الغابة خريطتها وتفتح الممر المؤدي إلى مخيم المستكشفين.",
+      "characters": ["سامي", "الحيوانات"],
+      "location": "الغابة",
+      "action": "طلب المساعدة من سامي",
+      "emotionalTone": "تشويق",
+      "cueIds": ["l3-scene-3-narration"],
+      "imageAssetId": "l3-scene-3-asset",
+      "visual": {
+        "assetId": "l3-scene-3-asset",
+        "imageUrl": "/images/lessons/island-3/story-scene-3.png",
+        "altText": "الحيوانات تطلب من سامي مساعدة إعادة الخريطة",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l3-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 3 - قصة الاستماع" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l3-game-03",
+      "challenges": [
+        {
+          "challengeId": "l3-g03-q01",
+          "visual": {
+            "assetId": "l3-rabbit-asset",
+            "imageUrl": "/images/lessons/island-3/rabbit.png",
+            "altText": "صورة أرنب",
+            "visualRole": "CHARACTER",
+            "requiredSubject": "أرنب",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 1"
+          }
+        },
+        {
+          "challengeId": "l3-g03-q02",
+          "visual": {
+            "assetId": "l3-lion-asset",
+            "imageUrl": "/images/lessons/island-3/lion.png",
+            "altText": "صورة أسد",
+            "visualRole": "CHARACTER",
+            "requiredSubject": "أسد",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 2"
+          }
+        },
+        {
+          "challengeId": "l3-g03-q03",
+          "visual": {
+            "assetId": "l3-tree-asset",
+            "imageUrl": "/images/lessons/island-3/tree.png",
+            "altText": "صورة شجرة كبيرة",
+            "visualRole": "OBJECT",
+            "requiredSubject": "شجرة",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 3"
+          }
+        }
+      ]
+    }
+  ]
+}

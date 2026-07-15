@@ -1,0 +1,355 @@
+.engineWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e293b;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .engineWrapper {
+    flex-direction: row;
+  }
+}
+
+.toastFeedback {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ef4444;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  z-index: 50;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translate(-50%, -1rem); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.shakeAnimation {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.scenePanel {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .scenePanel {
+    border-bottom: none;
+    border-left: 2px solid rgba(255, 255, 255, 0.1); /* RTL left border to separate right scene */
+  }
+}
+
+.sceneOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+  z-index: 0;
+}
+
+.sceneContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.interactionPanel {
+  flex: 1;
+  background-color: #0f172a;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.controlsTop {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.skipButton {
+  color: #cbd5e1;
+  background-color: rgba(30, 41, 59, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  border: 1px solid #475569;
+}
+
+.skipButton:hover {
+  color: white;
+  background-color: rgba(51, 65, 85, 0.5);
+}
+
+.skipButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.instruction {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07));
+}
+
+.stimulus {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #c084fc;
+  text-align: center;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.8));
+  margin-bottom: 1rem;
+  padding: 1.5rem 3rem;
+  background-color: rgba(88, 28, 135, 0.6);
+  border: 2px solid #a855f7;
+  border-radius: 1.5rem;
+}
+
+.dropZone {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.targetSlot {
+  width: 100%;
+  height: 5rem;
+  border: 4px dashed rgba(168, 85, 247, 0.3);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(216, 180, 254, 0.5);
+  background-color: rgba(15, 23, 42, 0.5);
+  transition: all 0.3s ease;
+}
+
+.targetSlotSelected {
+  border-color: #a855f7;
+  border-style: solid;
+  color: white;
+  background-color: rgba(147, 51, 234, 0.4);
+}
+
+.targetSlotCorrect {
+  border-color: #10b981;
+  border-style: solid;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #a7f3d0;
+}
+
+.targetSlotIncorrect {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.choicesBank {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 56rem;
+  padding: 2rem;
+  background-color: rgba(30, 41, 59, 0.5);
+  border-radius: 2rem;
+  border: 2px dashed rgba(148, 163, 184, 0.3);
+}
+
+.draggableChoice {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 900;
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  color: #4c1d95;
+  border: 2px solid #ddd6fe;
+  border-bottom: 6px solid #a78bfa;
+  cursor: pointer;
+  user-select: none;
+}
+
+.draggableChoice:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+.draggableChoice:hover {
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
+}
+
+.draggableChoiceSelected {
+  background-color: #f3e8ff;
+  border-color: #a855f7;
+  color: #581c87;
+  transform: scale(1.05);
+}
+
+.draggableChoicePlaced {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #f8fafc;
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  border-bottom-width: 2px;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.successActionRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  background-color: rgba(16, 185, 129, 0.15);
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  padding: 2rem 1.5rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+  animation: fadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.successMessage {
+  color: #34d399;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.nextChallengeButton {
+  background: linear-gradient(to right, #10b981, #059669);
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 900;
+  padding: 1.25rem 4rem;
+  border-radius: 1.5rem;
+  transition: all 0.15s ease;
+  box-shadow: 0 8px 0 0 rgba(4, 120, 87, 1), 0 15px 20px -5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: 2px solid #34d399;
+}
+
+.nextChallengeButton:hover {
+  background: linear-gradient(to right, #34d399, #10b981);
+  box-shadow: 0 6px 0 0 rgba(4, 120, 87, 1), 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  transform: translateY(2px);
+}
+
+.nextChallengeButton:active {
+  box-shadow: 0 0 0 0 rgba(4, 120, 87, 1);
+  transform: translateY(8px);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.checkButton {
+  background-color: #a855f7;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.checkButton:hover {
+  background-color: #9333ea;
+  transform: scale(1.05);
+}
+
+.checkButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.resetButton {
+  background-color: rgba(51, 65, 85, 0.8);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.resetButton:hover {
+  background-color: rgba(71, 85, 105, 0.8);
+}

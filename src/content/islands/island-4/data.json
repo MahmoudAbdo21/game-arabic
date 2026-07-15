@@ -1,0 +1,1090 @@
+{
+  "lessonId": "lesson-04",
+  "islandId": "island-4",
+  "title": "يَوْمٌ فِي المَدْرَسَة",
+  "activeLevels": 3,
+  "world": "بوابة المدرسة، الساحة، الفصل، ركن الرسم، معمل هندسة الأصوات، ومملكة خيالية داخل كتاب.",
+  "childFacingLevels": [
+    {
+      "levelId": "l4-level-01",
+      "title": "ساحة المدرسة التفاعلية",
+      "gameIds": [
+        "l4-game-01",
+        "l4-game-02",
+        "l4-game-03",
+        "l4-game-04"
+      ]
+    },
+    {
+      "levelId": "l4-level-02",
+      "title": "معمل هندسة الأصوات",
+      "gameIds": [
+        "l4-game-05",
+        "l4-game-06",
+        "l4-game-07",
+        "l4-game-08"
+      ]
+    },
+    {
+      "levelId": "l4-level-03",
+      "title": "بوابة الإتقان والاحتفال",
+      "gameIds": [],
+      "purpose": "مراجعة المتخطي والخطأ، إكمال شروط الجزيرة، ثم المشهد الختامي."
+    }
+  ],
+  "objectives": [
+    "تمييز الكلمات المتشابهة والمختلفة في الصوت الأول.",
+    "اكتشاف القافية ونغمة نهايات الكلمات.",
+    "ربط نطق الكلمة بصورتها وسياقها وشكلها المكتوب.",
+    "إكمال نهايات الكلمات.",
+    "عزل الأصوات من الكلمات.",
+    "استبدال الأصوات لتكوين كلمات جديدة.",
+    "حذف الأصوات واكتشاف الكلمة المتبقية."
+  ],
+  "warmup": {
+    "title": "ساحة المدرسة التفاعلية",
+    "description": "خريطة ثلاثية الطبقات لساحة المدرسة؛ تمر الكاميرا على البوابة والفصل وركن الرسم ومعمل الأصوات، وتظهر أهداف اليوم في بطاقات حقيقية من واجهة الموقع.",
+    "script": "مرحبًا بك يا بطل في ساحة المدرسة. سنصطاد الأصوات، ونغني مع نهايات الكلمات، ونربط الكلمة بصورتها وشكلها، ثم ندخل معمل هندسة الأصوات."
+  },
+  "story": {
+    "title": "صباح جديد",
+    "narration": "استيقظ كريم مبتسمًا، وارتدى ملابسه وذهب إلى المدرسة. وفي حصة الرسم رسم زهرة جميلة، ثم بحث عن ممحاة. ساعده صديقه طارق وأعطاه الممحاة، فشكرت المعلمة طارق وصفق الجميع لكريم.",
+    "presentation": "فيلم كرتوني قصير: المنزل، الطريق، بوابة المدرسة، الفصل، رسم الزهرة، البحث عن الممحاة، مساعدة طارق، وتصفيق المعلمة."
+  },
+  "charactersAndWords": [
+    "كَرِيم",
+    "طَارِق",
+    "المُعَلِّمَة",
+    "سَامِي سَاحِرُ الأَلْعَاب",
+    "مَدْرَسَة",
+    "مِمْحَاة",
+    "زَهْرَة",
+    "حَقِيبَة",
+    "أَصْفَر"
+  ],
+  "explanationScenes": [
+    {
+      "sceneId": "l4-exp-01",
+      "title": "السبورة السحرية",
+      "content": "بَطّة وبَقرة لشرح تشابه البداية؛ سَمَاء ومَاء لشرح القافية؛ ومطابقة صوت الكلمة بصورة معناها وشكلها المكتوب."
+    }
+  ],
+  "advancedStory": {
+    "title": "مملكة الأصوات",
+    "narration": "فتحت نادين كتابًا سحريًا، فسحبتها صفحاته إلى مملكة الأصوات. وجدت أصدقاءها محتجزين خلف بوابات طاقة، ولم يكن إنقاذهم ممكنًا إلا باستخدام آلات الدمج والمقص الذهبي والخلاط والممحاة السحرية.",
+    "characters": [
+      "نَادِين",
+      "أَحْمَد",
+      "مُصْطَفَى",
+      "عَبْدُ الله",
+      "المَلِكَة أَمَل",
+      "الجَمَل"
+    ]
+  },
+  "advancedExplanationScenes": [
+    {
+      "sceneId": "l4-exp-02",
+      "title": "آلة الدمج",
+      "content": "إكمال المقاطع والنهايات لتكوين كلمة."
+    },
+    {
+      "sceneId": "l4-exp-03",
+      "title": "المقص الذهبي",
+      "content": "عزل الصوت المطلوب من الكلمة."
+    },
+    {
+      "sceneId": "l4-exp-04",
+      "title": "الخلاط",
+      "content": "استبدال صوت لتكوين كلمة جديدة."
+    },
+    {
+      "sceneId": "l4-exp-05",
+      "title": "الممحاة السحرية",
+      "content": "حذف صوت واكتشاف الكلمة المتبقية."
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l4-game-01",
+      "title": "صياد الأصوات",
+      "mechanic": "SCENE_BASED_SOUND_HUNT",
+      "adventureTreatment": "كريم يحمل شبكة صيد في ساحة المدرسة، وتطير الفراشات التي تحمل الكلمات.",
+      "challenges": [
+        {
+          "challengeId": "l4-g01-q01",
+          "instruction": "اسمع الكلمتين: تِين وطِين. اصطد الفراشة التي تبدأ بصوت الطاء القوي والمفخم.",
+          "stimulus": "تِين — طِين",
+          "choices": [
+            {
+              "choiceId": "l4-g01-q01-c1",
+              "text": "تِين"
+            },
+            {
+              "choiceId": "l4-g01-q01-c2",
+              "text": "طِين"
+            }
+          ],
+          "correctChoiceTexts": [
+            "طِين"
+          ],
+          "correctFeedback": "أحسنت! طِين تبدأ بصوت الطاء المفخم.",
+          "retryFeedback": "استمع إلى الفرق بين تِـ وطِـ.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g01-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g01-q02",
+          "instruction": "استمع لاسم صديقنا: تَارِك أم طَارِق؟ اصطد الاسم الصحيح المنطوق بالطاء.",
+          "stimulus": "تَارِك — طَارِق",
+          "choices": [
+            {
+              "choiceId": "l4-g01-q02-c1",
+              "text": "تَارِك"
+            },
+            {
+              "choiceId": "l4-g01-q02-c2",
+              "text": "طَارِق"
+            }
+          ],
+          "correctChoiceTexts": [
+            "طَارِق"
+          ],
+          "correctFeedback": "رائع! الاسم الصحيح هو طَارِق.",
+          "retryFeedback": "ركّز في الصوت الأول: طَـ.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g01-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g01-q03",
+          "instruction": "أي كلمة صوت بدايتها مختلف عن الباقي؟ مَدْرَسَة، مِكْنَسَة، كِتَاب.",
+          "stimulus": "مَدْرَسَة — مِكْنَسَة — كِتَاب",
+          "choices": [
+            {
+              "choiceId": "l4-g01-q03-c1",
+              "text": "مَدْرَسَة"
+            },
+            {
+              "choiceId": "l4-g01-q03-c2",
+              "text": "مِكْنَسَة"
+            },
+            {
+              "choiceId": "l4-g01-q03-c3",
+              "text": "كِتَاب"
+            }
+          ],
+          "correctChoiceTexts": [
+            "كِتَاب"
+          ],
+          "correctFeedback": "ممتاز! كِتَاب تبدأ بصوت الكاف، والباقي بصوت الميم.",
+          "retryFeedback": "استمع إلى أول صوت في الكلمات الثلاث.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g01-q03-c3"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-02",
+      "title": "قطار الألحان",
+      "mechanic": "RHYME_TRAIN",
+      "adventureTreatment": "قطار المدرسة تنقصه عربة، ويختار الطفل العربة ذات القافية الصحيحة.",
+      "challenges": [
+        {
+          "challengeId": "l4-g02-q01",
+          "instruction": "كلمة سَعِيد. اختر العربة التي تغني معها بنفس النغمة.",
+          "stimulus": "سَعِيد",
+          "choices": [
+            {
+              "choiceId": "l4-g02-q01-c1",
+              "text": "بَعِيد"
+            },
+            {
+              "choiceId": "l4-g02-q01-c2",
+              "text": "حَزِين"
+            },
+            {
+              "choiceId": "l4-g02-q01-c3",
+              "text": "قَرِيب"
+            }
+          ],
+          "correctChoiceTexts": [
+            "بَعِيد"
+          ],
+          "correctFeedback": "صحيح! سَعِيد وبَعِيد لهما قافية متقاربة.",
+          "retryFeedback": "استمع إلى نهاية الكلمات.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g02-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g02-q02",
+          "instruction": "كلمة أَلْوَان. اختر الكلمة التي لها نغمة النهاية نفسها.",
+          "stimulus": "أَلْوَان",
+          "choices": [
+            {
+              "choiceId": "l4-g02-q02-c1",
+              "text": "أَقْلَام"
+            },
+            {
+              "choiceId": "l4-g02-q02-c2",
+              "text": "أَلْحَان"
+            },
+            {
+              "choiceId": "l4-g02-q02-c3",
+              "text": "كِتَاب"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَلْحَان"
+          ],
+          "correctFeedback": "أحسنت! أَلْوَان وأَلْحَان تتفقان في نغمة النهاية.",
+          "retryFeedback": "قارن نهاية أَلْوَان بنهاية كل اختيار.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g02-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g02-q03",
+          "instruction": "اسم كَرِيم. اختر العربة التي تتفق معه في نغمة الصوت الأخيرة.",
+          "stimulus": "كَرِيم",
+          "choices": [
+            {
+              "choiceId": "l4-g02-q03-c1",
+              "text": "عَظِيم"
+            },
+            {
+              "choiceId": "l4-g02-q03-c2",
+              "text": "طَارِق"
+            },
+            {
+              "choiceId": "l4-g02-q03-c3",
+              "text": "كَبِير"
+            }
+          ],
+          "correctChoiceTexts": [
+            "عَظِيم"
+          ],
+          "correctFeedback": "رائع! كَرِيم وعَظِيم لهما القافية نفسها.",
+          "retryFeedback": "استمع إلى المقطع الأخير: رِيم / ظِيم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g02-q03-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-03",
+      "title": "لوحة الرسم الذكية",
+      "mechanic": "CONTEXTUAL_WORD_TO_IMAGE_STICKER",
+      "adventureTreatment": "حامل رسم في ركن الفنون، ويكمل الطفل الجملة بملصق الصورة والكلمة الصحيح.",
+      "challenges": [
+        {
+          "challengeId": "l4-g03-q01",
+          "instruction": "أكمل الجملة بالملصق الصحيح: رَسَمَ كَرِيمٌ ... جَمِيلَةً.",
+          "stimulus": "رَسَمَ كَرِيمٌ ... جَمِيلَةً",
+          "choices": [
+            {
+              "choiceId": "l4-g03-q01-c1",
+              "text": "لَوْحَة"
+            },
+            {
+              "choiceId": "l4-g03-q01-c2",
+              "text": "زَهْرَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "زَهْرَة"
+          ],
+          "correctFeedback": "أحسنت! رَسَمَ كَرِيمٌ زَهْرَةً جَمِيلَةً.",
+          "retryFeedback": "استمع إلى الكلمة المفقودة وانظر إلى الملصقات.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g03-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g03-q02",
+          "instruction": "أكمل الجملة بالمكان الصحيح: ذَهَبَ كَرِيمٌ إِلَى ...",
+          "stimulus": "ذَهَبَ كَرِيمٌ إِلَى ...",
+          "choices": [
+            {
+              "choiceId": "l4-g03-q02-c1",
+              "text": "المَتْجَر"
+            },
+            {
+              "choiceId": "l4-g03-q02-c2",
+              "text": "المَدْرَسَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "المَدْرَسَة"
+          ],
+          "correctFeedback": "صحيح! ذَهَبَ كَرِيمٌ إِلَى المَدْرَسَة.",
+          "retryFeedback": "تذكر مكان قصة صباح جديد.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g03-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g03-q03",
+          "instruction": "أكمل قول كريم لطارق بالأداة الصحيحة: أَعْطِنِي ... مِنْ فَضْلِكَ.",
+          "stimulus": "أَعْطِنِي ... مِنْ فَضْلِكَ",
+          "choices": [
+            {
+              "choiceId": "l4-g03-q03-c1",
+              "text": "القَلَم"
+            },
+            {
+              "choiceId": "l4-g03-q03-c2",
+              "text": "المِمْحَاة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "المِمْحَاة"
+          ],
+          "correctFeedback": "ممتاز! أعطى طارق المِمْحَاة لكريم.",
+          "retryFeedback": "استمع إلى أداة القصة التي كان كريم يبحث عنها.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g03-q03-c2"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-04",
+      "title": "البطاقات المضيئة",
+      "mechanic": "SPOKEN_WORD_TO_WRITTEN_FORM",
+      "adventureTreatment": "معمل معتم قليلًا، وتضيء بطاقة الكلمة المكتوبة المطابقة للصوت.",
+      "challenges": [
+        {
+          "challengeId": "l4-g04-q01",
+          "instruction": "استمع: مُعَلِّمَة. اختر البطاقة المكتوبة المطابقة.",
+          "stimulus": "مُعَلِّمَة",
+          "choices": [
+            {
+              "choiceId": "l4-g04-q01-c1",
+              "text": "مُهَنْدِسَة"
+            },
+            {
+              "choiceId": "l4-g04-q01-c2",
+              "text": "مُعَلِّمَة"
+            },
+            {
+              "choiceId": "l4-g04-q01-c3",
+              "text": "مَدْرَسَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مُعَلِّمَة"
+          ],
+          "correctFeedback": "أحسنت! البطاقة الصحيحة هي مُعَلِّمَة.",
+          "retryFeedback": "قارن الحروف بما سمعته ببطء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g04-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l4-g04-q02",
+          "instruction": "استمع: حَقِيبَة. اختر البطاقة المكتوبة المطابقة.",
+          "stimulus": "حَقِيبَة",
+          "choices": [
+            {
+              "choiceId": "l4-g04-q02-c1",
+              "text": "حَدِيقَة"
+            },
+            {
+              "choiceId": "l4-g04-q02-c2",
+              "text": "حَقِيقَة"
+            },
+            {
+              "choiceId": "l4-g04-q02-c3",
+              "text": "حَقِيبَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "حَقِيبَة"
+          ],
+          "correctFeedback": "رائع! الكلمة الصحيحة هي حَقِيبَة.",
+          "retryFeedback": "ركز في صوت القاف والباء داخل الكلمة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g04-q02-c3"
+          ]
+        },
+        {
+          "challengeId": "l4-g04-q03",
+          "instruction": "استمع إلى لون الزهرة: أَصْفَر. اختر الكلمة الصحيحة.",
+          "stimulus": "أَصْفَر",
+          "choices": [
+            {
+              "choiceId": "l4-g04-q03-c1",
+              "text": "أَخْضَر"
+            },
+            {
+              "choiceId": "l4-g04-q03-c2",
+              "text": "أَصْفَر"
+            },
+            {
+              "choiceId": "l4-g04-q03-c3",
+              "text": "أَحْمَر"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَصْفَر"
+          ],
+          "correctFeedback": "ممتاز! الكلمة الصحيحة هي أَصْفَر.",
+          "retryFeedback": "استمع إلى بداية الكلمة ونهايتها.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g04-q03-c2"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-05",
+      "title": "مغناطيس النهايات",
+      "mechanic": "COMPLETE_WORD_ENDING",
+      "adventureTreatment": "آلة طاقة في معمل الأصوات تستقبل مقطع النهاية الصحيح بالمغناطيس.",
+      "challenges": [
+        {
+          "challengeId": "l4-g05-q01",
+          "instruction": "لدينا المقطع مَدْرَسَـ. اختر النهاية التي تكمل كلمة مَدْرَسَة.",
+          "stimulus": "مَدْرَسَـ",
+          "choices": [
+            {
+              "choiceId": "l4-g05-q01-c1",
+              "text": "ـة"
+            },
+            {
+              "choiceId": "l4-g05-q01-c2",
+              "text": "ـت"
+            },
+            {
+              "choiceId": "l4-g05-q01-c3",
+              "text": "ـا"
+            }
+          ],
+          "correctChoiceTexts": [
+            "ـة"
+          ],
+          "correctFeedback": "صحيح! مَدْرَسَة تنتهي بالتاء المربوطة.",
+          "retryFeedback": "اسمع نهاية كلمة مَدْرَسَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g05-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g05-q02",
+          "instruction": "لدينا المقطع طَـ. اختر الجزء الذي يكمل اسم طَارِق.",
+          "stimulus": "طَـ",
+          "choices": [
+            {
+              "choiceId": "l4-g05-q02-c1",
+              "text": "ـارِق"
+            },
+            {
+              "choiceId": "l4-g05-q02-c2",
+              "text": "ـارِك"
+            },
+            {
+              "choiceId": "l4-g05-q02-c3",
+              "text": "ـاك"
+            }
+          ],
+          "correctChoiceTexts": [
+            "ـارِق"
+          ],
+          "correctFeedback": "أحسنت! اكتمل اسم طَارِق.",
+          "retryFeedback": "ركز في نهاية الاسم: رِق.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g05-q02-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g05-q03",
+          "instruction": "لدينا المقطع كَرِ. اختر النهاية التي تكمل كلمة كَرِيم.",
+          "stimulus": "كَرِ",
+          "choices": [
+            {
+              "choiceId": "l4-g05-q03-c1",
+              "text": "ـيم"
+            },
+            {
+              "choiceId": "l4-g05-q03-c2",
+              "text": "ـين"
+            },
+            {
+              "choiceId": "l4-g05-q03-c3",
+              "text": "ـيل"
+            }
+          ],
+          "correctChoiceTexts": [
+            "ـيم"
+          ],
+          "correctFeedback": "رائع! اكتملت كلمة كَرِيم.",
+          "retryFeedback": "استمع إلى نهاية كَرِيم: ـيم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g05-q03-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-06",
+      "title": "مقص الأصوات الذهبي",
+      "mechanic": "ISOLATE_TARGET_SOUND",
+      "adventureTreatment": "شريط كلمة معلق ومقص ذهبي يعزل الصوت المطلوب في صندوق مضيء.",
+      "challenges": [
+        {
+          "challengeId": "l4-g06-q01",
+          "instruction": "اسمع كلمة قَلَم. اعزل الصوت الأول.",
+          "stimulus": "قَلَم",
+          "choices": [
+            {
+              "choiceId": "l4-g06-q01-c1",
+              "text": "قَ"
+            },
+            {
+              "choiceId": "l4-g06-q01-c2",
+              "text": "لَ"
+            },
+            {
+              "choiceId": "l4-g06-q01-c3",
+              "text": "م"
+            }
+          ],
+          "correctChoiceTexts": [
+            "قَ"
+          ],
+          "correctFeedback": "ممتاز! الصوت الأول هو قَ.",
+          "retryFeedback": "انطق الكلمة من بدايتها ببطء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g06-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g06-q02",
+          "instruction": "اسمع كلمة رَسَمَ. اعزل الصوت الأخير.",
+          "stimulus": "رَسَمَ",
+          "choices": [
+            {
+              "choiceId": "l4-g06-q02-c1",
+              "text": "رَ"
+            },
+            {
+              "choiceId": "l4-g06-q02-c2",
+              "text": "سَ"
+            },
+            {
+              "choiceId": "l4-g06-q02-c3",
+              "text": "مَ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَ"
+          ],
+          "correctFeedback": "صحيح! الصوت الأخير هو مَ.",
+          "retryFeedback": "استمع إلى آخر صوت في الكلمة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g06-q02-c3"
+          ]
+        },
+        {
+          "challengeId": "l4-g06-q03",
+          "instruction": "اسمع كلمة بَاب. اعزل صوت المد الطويل في وسط الكلمة.",
+          "stimulus": "بَاب",
+          "choices": [
+            {
+              "choiceId": "l4-g06-q03-c1",
+              "text": "بَ"
+            },
+            {
+              "choiceId": "l4-g06-q03-c2",
+              "text": "ا"
+            },
+            {
+              "choiceId": "l4-g06-q03-c3",
+              "text": "ب"
+            }
+          ],
+          "correctChoiceTexts": [
+            "ا"
+          ],
+          "correctFeedback": "أحسنت! حرف المد في الوسط هو الألف.",
+          "retryFeedback": "مدّ صوت الكلمة: بَاااب.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g06-q03-c2"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-07",
+      "title": "خلاط ومكساج الحروف",
+      "mechanic": "REPLACE_SOUND_TO_FORM_NEW_WORD",
+      "adventureTreatment": "خلاط إلكتروني يستبدل حرفًا بحرف ويخرج الكلمة الجديدة مع صورتها.",
+      "challenges": [
+        {
+          "challengeId": "l4-g07-q01",
+          "instruction": "في كلمة عَلَم، استبدل عَ بصوت قَ. ماذا تصبح؟",
+          "stimulus": "عَلَم → قَ + لَم",
+          "choices": [
+            {
+              "choiceId": "l4-g07-q01-c1",
+              "text": "قَلَم"
+            },
+            {
+              "choiceId": "l4-g07-q01-c2",
+              "text": "أَلَم"
+            },
+            {
+              "choiceId": "l4-g07-q01-c3",
+              "text": "قَدَم"
+            }
+          ],
+          "correctChoiceTexts": [
+            "قَلَم"
+          ],
+          "correctFeedback": "رائع! أصبحت الكلمة قَلَم.",
+          "retryFeedback": "ضع صوت قَ في بداية ـلَم.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g07-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g07-q02",
+          "instruction": "في كلمة نَامَ، استبدل الصوت الأخير مَ بصوت ر. ماذا تصبح؟",
+          "stimulus": "نَامَ → نَا + ر",
+          "choices": [
+            {
+              "choiceId": "l4-g07-q02-c1",
+              "text": "نَار"
+            },
+            {
+              "choiceId": "l4-g07-q02-c2",
+              "text": "نَاس"
+            },
+            {
+              "choiceId": "l4-g07-q02-c3",
+              "text": "نَالَ"
+            }
+          ],
+          "correctChoiceTexts": [
+            "نَار"
+          ],
+          "correctFeedback": "أحسنت! أصبحت الكلمة نَار.",
+          "retryFeedback": "استبدل آخر صوت فقط بصوت الراء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g07-q02-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g07-q03",
+          "instruction": "في كلمة تِين، استبدل تِ بصوت طِ. ماذا تصبح؟",
+          "stimulus": "تِين → طِ + ين",
+          "choices": [
+            {
+              "choiceId": "l4-g07-q03-c1",
+              "text": "طِين"
+            },
+            {
+              "choiceId": "l4-g07-q03-c2",
+              "text": "دِين"
+            },
+            {
+              "choiceId": "l4-g07-q03-c3",
+              "text": "سِين"
+            }
+          ],
+          "correctChoiceTexts": [
+            "طِين"
+          ],
+          "correctFeedback": "ممتاز! أصبحت الكلمة طِين.",
+          "retryFeedback": "استمع إلى الطاء المفخمة في بداية طِين.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g07-q03-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l4-game-08",
+      "title": "الممحاة السحرية",
+      "mechanic": "DELETE_SOUND_AND_DISCOVER_REMAINDER",
+      "adventureTreatment": "كلمة من مكعبات خشبية، وتمسح أداة ليزرية الصوت المطلوب لتظهر الكلمة المتبقية.",
+      "challenges": [
+        {
+          "challengeId": "l4-g08-q01",
+          "instruction": "في كلمة سَمَاء، احذف الصوت الأول سَ. ما الكلمة المتبقية؟",
+          "stimulus": "سَمَاء − سَ",
+          "choices": [
+            {
+              "choiceId": "l4-g08-q01-c1",
+              "text": "مَاء"
+            },
+            {
+              "choiceId": "l4-g08-q01-c2",
+              "text": "هَوَاء"
+            },
+            {
+              "choiceId": "l4-g08-q01-c3",
+              "text": "سَمَك"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَاء"
+          ],
+          "correctFeedback": "أحسنت! الكلمة المتبقية هي مَاء.",
+          "retryFeedback": "احذف سَ من بداية سَمَاء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g08-q01-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g08-q02",
+          "instruction": "في كلمة رِمَال، احذف الصوت الأول رِ. ما الكلمة المتبقية؟",
+          "stimulus": "رِمَال − رِ",
+          "choices": [
+            {
+              "choiceId": "l4-g08-q02-c1",
+              "text": "مَال"
+            },
+            {
+              "choiceId": "l4-g08-q02-c2",
+              "text": "جَمَال"
+            },
+            {
+              "choiceId": "l4-g08-q02-c3",
+              "text": "كَمَال"
+            }
+          ],
+          "correctChoiceTexts": [
+            "مَال"
+          ],
+          "correctFeedback": "رائع! الكلمة المتبقية هي مَال.",
+          "retryFeedback": "ابدأ من كلمة رِمَال واحذف رِ فقط.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g08-q02-c1"
+          ]
+        },
+        {
+          "challengeId": "l4-g08-q03",
+          "instruction": "في كلمة زَهْرَة، احذف التاء المربوطة في النهاية. ماذا تبقى؟",
+          "stimulus": "زَهْرَة − ة",
+          "choices": [
+            {
+              "choiceId": "l4-g08-q03-c1",
+              "text": "زَهْر"
+            },
+            {
+              "choiceId": "l4-g08-q03-c2",
+              "text": "زَهَر"
+            },
+            {
+              "choiceId": "l4-g08-q03-c3",
+              "text": "نَهْر"
+            }
+          ],
+          "correctChoiceTexts": [
+            "زَهْر"
+          ],
+          "correctFeedback": "ممتاز! الكلمة المتبقية هي زَهْر.",
+          "retryFeedback": "احذف آخر رمز فقط من زَهْرَة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l4-g08-q03-c1"
+          ]
+        }
+      ]
+    }
+  ],
+  "review": "بوابة الإتقان تعرض المتخطي أولًا، ثم الأسئلة الخطأ اللازمة للوصول إلى 80%. تعيد الطفل إلى المشهد نفسه دون إعادة الفصل كاملًا.",
+  "conclusion": "تفتح الأقفال، وتجتمع الشخصيات في مشهد سينمائي، وتتساقط النجوم والبالونات، ويُعلن الطفل مهندسًا محترفًا لأصوات اللغة العربية، ويأخذ كأس الجزيرة مرة واحدة."
+}

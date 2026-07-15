@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "lessonId": "lesson-4",
+  "islandId": "island-4",
+  "storyScenes": [
+    {
+      "sceneId": "l4-scene-1",
+      "lessonId": "lesson-4",
+      "order": 1,
+      "title": "صباح كريم",
+      "narration": "استيقظ كريم مبتسمًا، وارتدى ملابسه وذهب إلى المدرسة.",
+      "characters": ["كريم"],
+      "location": "المنزل والطريق للمدرسة",
+      "action": "استيقاظ وذهاب للمدرسة",
+      "emotionalTone": "مبتسم ونشيط",
+      "cueIds": ["l4-scene-1-narration"],
+      "imageAssetId": "l4-scene-1-asset",
+      "visual": {
+        "assetId": "l4-scene-1-asset",
+        "imageUrl": "/images/lessons/island-4/story-scene-1.png",
+        "altText": "كريم يرتدي ملابسه ويذهب إلى المدرسة مبتسماً",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "nextSceneId": "l4-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 4 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l4-scene-2",
+      "lessonId": "lesson-4",
+      "order": 2,
+      "title": "حصة الرسم",
+      "narration": "وفي حصة الرسم رسم زهرة جميلة، ثم بحث عن ممحاة.",
+      "characters": ["كريم"],
+      "location": "الفصل",
+      "action": "رسم زهرة والبحث عن ممحاة",
+      "emotionalTone": "منهمك",
+      "cueIds": ["l4-scene-2-narration"],
+      "imageAssetId": "l4-scene-2-asset",
+      "visual": {
+        "assetId": "l4-scene-2-asset",
+        "imageUrl": "/images/lessons/island-4/story-scene-2.png",
+        "altText": "كريم يرسم زهرة ويبحث عن ممحاة",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l4-scene-1",
+      "nextSceneId": "l4-scene-3",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 4 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l4-scene-3",
+      "lessonId": "lesson-4",
+      "order": 3,
+      "title": "الصديق المتعاون",
+      "narration": "ساعده صديقه طارق وأعطاه الممحاة، فشكرت المعلمة طارق وصفق الجميع لكريم.",
+      "characters": ["كريم", "طارق", "المعلمة", "التلاميذ"],
+      "location": "الفصل",
+      "action": "طارق يعطي الممحاة لكريم",
+      "emotionalTone": "فرح وامتنان",
+      "cueIds": ["l4-scene-3-narration"],
+      "imageAssetId": "l4-scene-3-asset",
+      "visual": {
+        "assetId": "l4-scene-3-asset",
+        "imageUrl": "/images/lessons/island-4/story-scene-3.png",
+        "altText": "طارق يساعد كريم والمعلمة تشكره وسط تصفيق التلاميذ",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l4-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 4 - قصة الاستماع" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l4-game-03",
+      "challenges": [
+        {
+          "challengeId": "l4-g03-q01",
+          "visual": {
+            "assetId": "l4-drawing-flower-asset",
+            "imageUrl": "/images/lessons/island-4/drawing-flower.png",
+            "altText": "صورة زهرة مرسومة",
+            "visualRole": "CHALLENGE_STIMULUS",
+            "requiredSubject": "زهرة مرسومة",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 1"
+          }
+        },
+        {
+          "challengeId": "l4-g03-q02",
+          "visual": {
+            "assetId": "l4-school-asset",
+            "imageUrl": "/images/lessons/island-4/school.png",
+            "altText": "صورة مدرسة",
+            "visualRole": "PLACE",
+            "requiredSubject": "مدرسة",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 2"
+          }
+        }
+      ]
+    }
+  ]
+}

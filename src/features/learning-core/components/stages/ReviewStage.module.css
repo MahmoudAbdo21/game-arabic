@@ -1,0 +1,143 @@
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  background-color: #0f172a;
+  border-radius: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  min-height: 80vh;
+  border: 8px solid #10b981;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.backgroundLayer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 50%, #0f172a 100%);
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.title {
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #99f6e4;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.8));
+  letter-spacing: 0.025em;
+  margin: 0;
+}
+
+.transcriptButton {
+  background-color: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.transcriptButton:hover {
+  background-color: rgba(30, 41, 59, 1);
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 20;
+  flex: 1;
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contentContainer {
+    padding: 0 4rem 2rem 4rem;
+  }
+}
+
+.contentPanel {
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 2px solid rgba(45, 212, 191, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contentText {
+  font-size: clamp(1.25rem, 2vw, 1.875rem);
+  font-weight: 900;
+  color: #ccfbf1;
+  line-height: 1.8;
+  text-align: right;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.footer {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 30;
+  background: linear-gradient(to top, #0f172a 50%, transparent);
+}
+
+.nextButton {
+  background: linear-gradient(to right, #14b8a6, #0f766e);
+  color: white;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 900;
+  padding: 1.25rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 0 0 rgba(15, 118, 110, 1), 0 15px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background: linear-gradient(to right, #2dd4bf, #0d9488);
+  box-shadow: 0 4px 0 0 rgba(15, 118, 110, 1), 0 10px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(4px);
+}
+
+.nextButton:active {
+  background: linear-gradient(to right, #0d9488, #115e59);
+  box-shadow: none;
+  transform: translateY(8px);
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

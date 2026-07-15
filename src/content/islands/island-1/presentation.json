@@ -1,0 +1,238 @@
+{
+  "version": "1.0.0",
+  "lessonId": "lesson-1",
+  "islandId": "island-1",
+  "storyScenes": [
+    {
+      "sceneId": "l1-scene-1",
+      "lessonId": "lesson-1",
+      "order": 1,
+      "title": "أسرة مريم",
+      "narration": "اسمي مريم وعمري ست سنوات، وأخي يوسف عمره تسع سنوات.",
+      "characters": ["مريم", "يوسف"],
+      "location": "البيت",
+      "action": "تعريف بالشخصيات",
+      "emotionalTone": "هادئ",
+      "cueIds": ["l1-scene-1-narration"],
+      "imageAssetId": "l1-scene-1-asset",
+      "visual": {
+        "assetId": "l1-scene-1-asset",
+        "imageUrl": "/images/lessons/island-1/story-scene-1.png",
+        "altText": "مريم ويوسف في البيت",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "nextSceneId": "l1-scene-2",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 1 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l1-scene-2",
+      "lessonId": "lesson-1",
+      "order": 2,
+      "title": "مساعدة الأسرة",
+      "narration": "كان يوسف دائمًا يساعد أمي وأبي في أشياء عديدة بالبيت، مثل شراء الأكل من المتجر والاعتناء بأشجار الحديقة.",
+      "characters": ["يوسف", "الأم", "الأب"],
+      "location": "الحديقة",
+      "action": "يوسف يساعد الأسرة",
+      "emotionalTone": "نشط",
+      "cueIds": ["l1-scene-2-narration"],
+      "imageAssetId": "l1-scene-2-asset",
+      "visual": {
+        "assetId": "l1-scene-2-asset",
+        "imageUrl": "/images/lessons/island-1/story-scene-2.png",
+        "altText": "يوسف يساعد والده في الحديقة",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l1-scene-1",
+      "nextSceneId": "l1-scene-3",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 1 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l1-scene-3",
+      "lessonId": "lesson-1",
+      "order": 3,
+      "title": "أمنية مريم",
+      "narration": "كنت دائمًا أفكر في أن أتعلم أشياء أساعد بها أمي وأبي في البيت أيضًا.",
+      "characters": ["مريم"],
+      "location": "البيت",
+      "action": "مريم تفكر",
+      "emotionalTone": "متأمل",
+      "cueIds": ["l1-scene-3-narration"],
+      "imageAssetId": "l1-scene-3-asset",
+      "visual": {
+        "assetId": "l1-scene-3-asset",
+        "imageUrl": "/images/lessons/island-1/story-scene-3.png",
+        "altText": "مريم تفكر في مساعدة والديها",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l1-scene-2",
+      "nextSceneId": "l1-scene-4",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 1 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l1-scene-4",
+      "lessonId": "lesson-1",
+      "order": 4,
+      "title": "دراجة يوسف",
+      "narration": "وفي يوم من الأيام رأيت يوسف وهو يركب دراجته بسرعة ومهارة، وهو ذاهب إلى المتجر ليشتري طلبات البيت.",
+      "characters": ["مريم", "يوسف"],
+      "location": "الشارع / المتجر",
+      "action": "يوسف يركب دراجة",
+      "emotionalTone": "إعجاب",
+      "cueIds": ["l1-scene-4-narration"],
+      "imageAssetId": "l1-scene-4-asset",
+      "visual": {
+        "assetId": "l1-scene-4-asset",
+        "imageUrl": "/images/lessons/island-1/story-scene-4.png",
+        "altText": "يوسف يركب دراجته ذاهباً للمتجر",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l1-scene-3",
+      "nextSceneId": "l1-scene-5",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 1 - قصة الاستماع" }
+      ]
+    },
+    {
+      "sceneId": "l1-scene-5",
+      "lessonId": "lesson-1",
+      "order": 5,
+      "title": "مريم الحزينة",
+      "narration": "شعرت بالحزن، فأنا أيضًا أريد أن أساعد أمي وأبي.",
+      "characters": ["مريم", "الجد"],
+      "location": "البيت",
+      "action": "مريم حزينة وظهور الجد",
+      "emotionalTone": "حزين ثم متفائل",
+      "cueIds": ["l1-scene-5-narration"],
+      "imageAssetId": "l1-scene-5-asset",
+      "visual": {
+        "assetId": "l1-scene-5-asset",
+        "imageUrl": "/images/lessons/island-1/story-scene-5.png",
+        "altText": "مريم تنظر بحزن ويظهر الجد ليواسيها",
+        "visualRole": "STORY_SCENE",
+        "aspectRatio": "16/9",
+        "objectFit": "cover",
+        "sourceStatus": "MISSING",
+        "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - قصة الاستماع"
+      },
+      "previousSceneId": "l1-scene-4",
+      "sourceReferences": [
+        { "file": "MASTER-FOUR-LESSON-CONTENT.md", "pageOrSection": "الدرس 1 - قصة الاستماع" }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l1-game-01",
+      "challenges": [
+        {
+          "challengeId": "l1-g01-q01",
+          "visual": {
+            "assetId": "l1-bicycle-asset",
+            "imageUrl": "/images/lessons/island-1/bicycle.png",
+            "altText": "صورة دراجة حمراء جميلة للأطفال",
+            "visualRole": "CHALLENGE_STIMULUS",
+            "requiredSubject": "دراجة",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 1"
+          }
+        },
+        {
+          "challengeId": "l1-g01-q02",
+          "visual": {
+            "assetId": "l1-youssef-asset",
+            "imageUrl": "/images/lessons/island-1/youssef.png",
+            "altText": "صورة الطفل يوسف",
+            "visualRole": "CHARACTER",
+            "requiredSubject": "يوسف",
+            "aspectRatio": "16/9",
+            "objectFit": "contain",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 2"
+          }
+        },
+        {
+          "challengeId": "l1-g01-q03",
+          "visual": {
+            "assetId": "l1-store-asset",
+            "imageUrl": "/images/lessons/island-1/store.png",
+            "altText": "صورة متجر بقالة للأطفال",
+            "visualRole": "PLACE",
+            "requiredSubject": "متجر",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING",
+            "sourceReference": "MASTER-FOUR-LESSON-CONTENT.md - التحدي 3"
+          }
+        }
+      ]
+    },
+    {
+      "gameId": "l1-game-05",
+      "challenges": [
+        {
+          "challengeId": "l1-g05-q01",
+          "visual": {
+            "assetId": "l1-garden-asset",
+            "imageUrl": "/images/lessons/island-1/garden.png",
+            "altText": "صورة بستان به أشجار الحروف",
+            "visualRole": "PLACE",
+            "requiredSubject": "حديقة",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING"
+          }
+        },
+        {
+          "challengeId": "l1-g05-q02",
+          "visual": {
+            "assetId": "l1-garden-asset",
+            "imageUrl": "/images/lessons/island-1/garden.png",
+            "altText": "صورة بستان به أشجار الحروف",
+            "visualRole": "PLACE",
+            "requiredSubject": "حديقة",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING"
+          }
+        },
+        {
+          "challengeId": "l1-g05-q03",
+          "visual": {
+            "assetId": "l1-garden-asset",
+            "imageUrl": "/images/lessons/island-1/garden.png",
+            "altText": "صورة بستان به أشجار الحروف",
+            "visualRole": "PLACE",
+            "requiredSubject": "حديقة",
+            "aspectRatio": "16/9",
+            "objectFit": "cover",
+            "sourceStatus": "MISSING"
+          }
+        }
+      ]
+    }
+  ]
+}

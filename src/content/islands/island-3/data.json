@@ -1,0 +1,496 @@
+{
+  "lessonId": "lesson-03",
+  "islandId": "island-3",
+  "title": "عَالَمُ الحَيَوَان",
+  "activeLevels": 3,
+  "world": "غابة حية، مخيم مستكشف، مسارات آثار أقدام، مختبر أصوات، وقطار مقاطع بين المواطن الطبيعية.",
+  "objectives": [
+    "تقطيع كلمات الحيوانات والطبيعة إلى أجزاء صوتية.",
+    "دمج المقاطع بالترتيب لتكوين كلمات.",
+    "ربط صورة الحيوان أو العنصر الطبيعي بالكلمة المكتوبة."
+  ],
+  "warmup": {
+    "title": "ظل ملك الغابة",
+    "description": "يظهر ظل أسد خلف الأشجار. يختار الطفل اسمه من ثلاث بطاقات. الإجابة أَسَد. التمهيد غير محسوب ضمن العشر نقاط.",
+    "script": "انظر إلى الظل خلف الأشجار. من هذا الحيوان؟"
+  },
+  "story": {
+    "title": "لافتات الغابة الضائعة",
+    "narration": "وصل المستكشف سامي إلى بوابة الغابة، فوجد الأرنب والنملة والأسد حائرين. هبت رياح قوية فبعثرت لافتات الأسماء وقطعت الكلمات إلى أجزاء صغيرة. طلبت الحيوانات من سامي أن يعيد ترتيب المقاطع، ويطابق كل صورة باسمها، حتى تستعيد الغابة خريطتها وتفتح الممر المؤدي إلى مخيم المستكشفين.",
+    "presentation": "بوابة الغابة، لقاء الأرنب، طريق النمل، عرين الأسد، الشجرة الكبيرة، ثم مخيم المستكشف."
+  },
+  "charactersAndWords": [
+    "سَامِي",
+    "أَسَد",
+    "أَرْنَب",
+    "نَمْلَة",
+    "شَجَرَة",
+    "حَيَوَان",
+    "غَابَة"
+  ],
+  "explanationScenes": [
+    {
+      "sceneId": "l3-exp-01",
+      "title": "آلة تقطيع الكلمات",
+      "content": "عرض الكلمة في أجزاء صوتية مع إضاءة الجزء المنطوق مستقبلًا."
+    },
+    {
+      "sceneId": "l3-exp-02",
+      "title": "قطار الدمج",
+      "content": "ترتيب المقاطع لتكوين كلمة مفهومة."
+    },
+    {
+      "sceneId": "l3-exp-03",
+      "title": "مغناطيس الصورة والكلمة",
+      "content": "مطابقة الصورة الطبيعية بالكلمة المكتوبة."
+    }
+  ],
+  "games": [
+    {
+      "gameId": "l3-game-01",
+      "title": "محطة التقطيع",
+      "mechanic": "COUNT_AND_REVEAL_WORD_SEGMENTS",
+      "adventureTreatment": "مختبر أصوات داخل الغابة؛ تتحول الكلمة إلى قطع ضوئية بعد اختيار العدد الصحيح.",
+      "challenges": [
+        {
+          "challengeId": "l3-g01-q01",
+          "instruction": "كم مقطعًا صوتيًّا في كلمة أَرْنَب؟",
+          "stimulus": "أَرْ | نَـ | ب",
+          "choices": [
+            {
+              "choiceId": "l3-g01-q01-c1",
+              "text": "2"
+            },
+            {
+              "choiceId": "l3-g01-q01-c2",
+              "text": "3"
+            },
+            {
+              "choiceId": "l3-g01-q01-c3",
+              "text": "4"
+            }
+          ],
+          "correctChoiceTexts": [
+            "3"
+          ],
+          "correctFeedback": "رائع! يتكون النشاط من ثلاثة أجزاء صوتية.",
+          "retryFeedback": "استمع إلى الكلمة ببطء وعد الأجزاء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g01-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l3-g01-q02",
+          "instruction": "كم مقطعًا صوتيًّا في كلمة نَمْلَة؟",
+          "stimulus": "نَمْ | لَ | ة",
+          "choices": [
+            {
+              "choiceId": "l3-g01-q02-c1",
+              "text": "2"
+            },
+            {
+              "choiceId": "l3-g01-q02-c2",
+              "text": "3"
+            },
+            {
+              "choiceId": "l3-g01-q02-c3",
+              "text": "4"
+            }
+          ],
+          "correctChoiceTexts": [
+            "3"
+          ],
+          "correctFeedback": "أحسنت! يتكون النشاط من ثلاثة أجزاء صوتية.",
+          "retryFeedback": "جرّب تقطيع الكلمة ببطء.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g01-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l3-g01-q03",
+          "instruction": "كم مقطعًا صوتيًّا في كلمة أَسَد؟",
+          "stimulus": "أَ | سَ | د",
+          "choices": [
+            {
+              "choiceId": "l3-g01-q03-c1",
+              "text": "2"
+            },
+            {
+              "choiceId": "l3-g01-q03-c2",
+              "text": "3"
+            },
+            {
+              "choiceId": "l3-g01-q03-c3",
+              "text": "4"
+            }
+          ],
+          "correctChoiceTexts": [
+            "3"
+          ],
+          "correctFeedback": "ممتاز! يتكون النشاط من ثلاثة أجزاء صوتية.",
+          "retryFeedback": "استمع إلى: أَ...سَ...د.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g01-q03-c2"
+          ]
+        },
+        {
+          "challengeId": "l3-g01-q04",
+          "instruction": "كم مقطعًا صوتيًّا في اسم سَامِي؟",
+          "stimulus": "سَا | مِي",
+          "choices": [
+            {
+              "choiceId": "l3-g01-q04-c1",
+              "text": "2"
+            },
+            {
+              "choiceId": "l3-g01-q04-c2",
+              "text": "3"
+            },
+            {
+              "choiceId": "l3-g01-q04-c3",
+              "text": "4"
+            }
+          ],
+          "correctChoiceTexts": [
+            "2"
+          ],
+          "correctFeedback": "صحيح! سَامِي تتكون من مقطعين.",
+          "retryFeedback": "انطق الاسم ببطء: سَا...مِي.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g01-q04-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l3-game-02",
+      "title": "قطار دمج المقاطع",
+      "mechanic": "ORDER_SEGMENTS_TO_BUILD_WORD",
+      "adventureTreatment": "قطار غابة يحمل مقاطع الكلمة، ويضع الطفل العربات بالترتيب الصحيح.",
+      "challenges": [
+        {
+          "challengeId": "l3-g02-q01",
+          "instruction": "رتب مقاطع كلمة شَجَرَة بالترتيب الصحيح.",
+          "stimulus": "شَجَرَة",
+          "choices": [
+            {
+              "choiceId": "l3-g02-q01-c1",
+              "text": "شَـ"
+            },
+            {
+              "choiceId": "l3-g02-q01-c2",
+              "text": "جَـ"
+            },
+            {
+              "choiceId": "l3-g02-q01-c3",
+              "text": "رَ"
+            },
+            {
+              "choiceId": "l3-g02-q01-c4",
+              "text": "ة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "شَـ",
+            "جَـ",
+            "رَ",
+            "ة"
+          ],
+          "correctFeedback": "ممتاز! اكتملت كلمة شَجَرَة.",
+          "retryFeedback": "اختر المقطع التالي كما تسمعه.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g02-q01-c1",
+            "l3-g02-q01-c2",
+            "l3-g02-q01-c3",
+            "l3-g02-q01-c4"
+          ]
+        },
+        {
+          "challengeId": "l3-g02-q02",
+          "instruction": "رتب مقاطع كلمة نَمْلَة بالترتيب الصحيح.",
+          "stimulus": "نَمْلَة",
+          "choices": [
+            {
+              "choiceId": "l3-g02-q02-c1",
+              "text": "نَـ"
+            },
+            {
+              "choiceId": "l3-g02-q02-c2",
+              "text": "مْـ"
+            },
+            {
+              "choiceId": "l3-g02-q02-c3",
+              "text": "لَـ"
+            },
+            {
+              "choiceId": "l3-g02-q02-c4",
+              "text": "ة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "نَـ",
+            "مْـ",
+            "لَـ",
+            "ة"
+          ],
+          "correctFeedback": "رائع! اكتملت كلمة نَمْلَة.",
+          "retryFeedback": "أعد الاستماع واختر المقطع الصحيح.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g02-q02-c1",
+            "l3-g02-q02-c2",
+            "l3-g02-q02-c3",
+            "l3-g02-q02-c4"
+          ]
+        },
+        {
+          "challengeId": "l3-g02-q03",
+          "instruction": "رتب مقاطع كلمة حَيَوَان بالترتيب الصحيح.",
+          "stimulus": "حَيَوَان",
+          "choices": [
+            {
+              "choiceId": "l3-g02-q03-c1",
+              "text": "حَـ"
+            },
+            {
+              "choiceId": "l3-g02-q03-c2",
+              "text": "يَـ"
+            },
+            {
+              "choiceId": "l3-g02-q03-c3",
+              "text": "وَا"
+            },
+            {
+              "choiceId": "l3-g02-q03-c4",
+              "text": "ن"
+            }
+          ],
+          "correctChoiceTexts": [
+            "حَـ",
+            "يَـ",
+            "وَا",
+            "ن"
+          ],
+          "correctFeedback": "أحسنت! اكتملت كلمة حَيَوَان.",
+          "retryFeedback": "رتب المقاطع حسب تسلسل الصوت.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g02-q03-c1",
+            "l3-g02-q03-c2",
+            "l3-g02-q03-c3",
+            "l3-g02-q03-c4"
+          ]
+        }
+      ]
+    },
+    {
+      "gameId": "l3-game-03",
+      "title": "مغناطيس الصورة والكلمة",
+      "mechanic": "IMAGE_TO_WORD_MATCH",
+      "adventureTreatment": "صور الحيوانات تظهر فوق منصات مغناطيسية، ويجذب الطفل بطاقة الكلمة الصحيحة.",
+      "challenges": [
+        {
+          "challengeId": "l3-g03-q01",
+          "instruction": "اختر الكلمة المناسبة لصورة الأرنب.",
+          "stimulus": "صورة أَرْنَب",
+          "choices": [
+            {
+              "choiceId": "l3-g03-q01-c1",
+              "text": "أَسَد"
+            },
+            {
+              "choiceId": "l3-g03-q01-c2",
+              "text": "أَرْنَب"
+            },
+            {
+              "choiceId": "l3-g03-q01-c3",
+              "text": "شَجَرَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَرْنَب"
+          ],
+          "correctFeedback": "أحسنت! إنها كلمة أَرْنَب.",
+          "retryFeedback": "استمع إلى الكلمات وانظر إلى الصورة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g03-q01-c2"
+          ]
+        },
+        {
+          "challengeId": "l3-g03-q02",
+          "instruction": "اختر الكلمة المناسبة لصورة الأسد.",
+          "stimulus": "صورة أَسَد",
+          "choices": [
+            {
+              "choiceId": "l3-g03-q02-c1",
+              "text": "نَمْلَة"
+            },
+            {
+              "choiceId": "l3-g03-q02-c2",
+              "text": "أَسَد"
+            },
+            {
+              "choiceId": "l3-g03-q02-c3",
+              "text": "غَابَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "أَسَد"
+          ],
+          "correctFeedback": "رائع! إنه أَسَد.",
+          "retryFeedback": "فكر في اسم ملك الغابة.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g03-q02-c2"
+          ]
+        },
+        {
+          "challengeId": "l3-g03-q03",
+          "instruction": "اختر الكلمة المناسبة لصورة الشجرة.",
+          "stimulus": "صورة شَجَرَة",
+          "choices": [
+            {
+              "choiceId": "l3-g03-q03-c1",
+              "text": "حَيَوَان"
+            },
+            {
+              "choiceId": "l3-g03-q03-c2",
+              "text": "أَرْنَب"
+            },
+            {
+              "choiceId": "l3-g03-q03-c3",
+              "text": "شَجَرَة"
+            }
+          ],
+          "correctChoiceTexts": [
+            "شَجَرَة"
+          ],
+          "correctFeedback": "صحيح! هذه شَجَرَة.",
+          "retryFeedback": "انظر إلى الصورة واختر اسمها المكتوب.",
+          "basePoints": 1,
+          "maxGuidedRetries": 2,
+          "skipPolicy": "TEMPORARY_SKIP_TO_SKIPPED_PENDING",
+          "replayPolicy": "REPLAY_ALLOWED_NO_ADDITIONAL_POINTS",
+          "requiredAudioCueKinds": [
+            "instruction",
+            "stimulus",
+            "choice",
+            "correct_feedback",
+            "retry_feedback",
+            "help"
+          ],
+          "correctChoiceIds": [
+            "l3-g03-q03-c3"
+          ]
+        }
+      ]
+    }
+  ],
+  "review": "مخيم تدريب يجمع آثار الأقدام المؤدية إلى الأسئلة المتخطاة والخطأ.",
+  "conclusion": "تعود لافتات الحيوانات إلى أماكنها، وتفتح الغابة ممرًا مضيئًا، ويحصل الطفل على كأس مستكشف الكلمات."
+}

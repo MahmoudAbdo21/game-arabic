@@ -1,0 +1,44 @@
+.animatedBg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.particle, .sparkle {
+  position: absolute;
+  color: #c084fc;
+  font-weight: bold;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.sparkle {
+  color: #fcd34d;
+  font-size: 1.5rem;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-20vh) rotate(360deg) scale(1.2); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+.p1 { left: 10%; animation: floatUp 15s linear infinite; }
+.p2 { left: 30%; animation: floatUp 18s linear infinite 2s; }
+.p3 { left: 50%; animation: floatUp 20s linear infinite 5s; }
+.p4 { left: 70%; animation: floatUp 16s linear infinite 1s; }
+.p5 { left: 85%; animation: floatUp 19s linear infinite 3s; }
+.p6 { left: 20%; animation: floatUp 17s linear infinite 6s; }
+
+.s1 { top: 20%; left: 15%; animation: twinkle 4s ease-in-out infinite; }
+.s2 { top: 60%; left: 80%; animation: twinkle 5s ease-in-out infinite 1s; }
+.s3 { top: 40%; left: 50%; animation: twinkle 6s ease-in-out infinite 2s; }

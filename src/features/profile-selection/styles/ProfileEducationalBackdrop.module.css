@@ -1,0 +1,56 @@
+.educationalBackdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.motifGlyph {
+  position: absolute;
+  display: inline-block;
+  user-select: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  opacity: var(--base-opacity, 0.1);
+}
+
+/* Base Desktop Sizes */
+.motifSizeLg { font-size: clamp(70px, 8vw, 150px); }
+.motifSizeMd { font-size: clamp(24px, 3vw, 46px); }
+.motifSizeSm { font-size: clamp(12px, 1.5vw, 20px); }
+
+/* Colors */
+.motifColorGreen { color: #135C4A; }
+.motifColorGold { color: #C5A028; }
+.motifColorAqua { color: #5EEAD4; }
+
+/* Subtle Desktop Motion */
+@media (min-width: 1100px) and (prefers-reduced-motion: no-preference) {
+  .motifLayer1 { animation: float-slow 24s ease-in-out infinite alternate; }
+  .motifLayer2 { animation: float-slow 18s ease-in-out infinite alternate-reverse; }
+  .motifLayer3 { animation: float-breathe 20s ease-in-out infinite alternate; }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-6px) rotate(2deg); }
+}
+
+@keyframes float-breathe {
+  0% { transform: translateY(0px) scale(1); opacity: var(--base-opacity, 0.1); }
+  100% { transform: translateY(-4px) scale(1.05); opacity: calc(var(--base-opacity, 0.1) * 0.7); }
+}
+
+/* Tablet Reductions (700px - 1099px) - approx 20% opacity reduction */
+@media (min-width: 700px) and (max-width: 1099px) {
+  .motifGlyph { opacity: calc(var(--base-opacity, 0.1) * 0.8); }
+  .motifLayer1 { font-size: clamp(50px, 6vw, 100px); }
+}
+
+/* Mobile Reductions (< 700px) */
+@media (max-width: 699px) {
+  .motifGlyph { opacity: calc(var(--base-opacity, 0.1) * 0.45); }
+  .motifLayer1 { font-size: clamp(40px, 10vw, 70px); }
+  .motifLayer3 { display: none; }
+}

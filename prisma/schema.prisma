@@ -1,0 +1,174 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model PlayerProfile {
+  id        String   @id @default(uuid())
+  name      String
+  avatarId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sessions         PlayerSession[]
+  islandProgress   IslandProgress[]
+  rewardLedger     RewardLedger[]
+  resumeLocation   ResumeLocation?
+  challengeAttempts ChallengeAttempt[]
+  pendingItems     PendingItem[]
+  idempotencyRecords IdempotencyRecord[]
+}
+
+model PlayerSession {
+  id        String   @id @default(uuid())
+  profileId String
+  startTime DateTime @default(now())
+  endTime   DateTime?
+  
+  profile   PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+}
+
+model ContentVersion {
+  id        String   @id @default(uuid())
+  version   String   @unique
+  appliedAt DateTime @default(now())
+}
+
+model IslandProgress {
+  id        String   @id @default(uuid())
+  profileId String
+  islandId  String
+  status    String   @default("AVAILABLE") // AVAILABLE, IN_PROGRESS, COMPLETED
+  
+  completedStageCount Int @default(0)
+  correctChallengeCount Int @default(0)
+  totalMandatoryChallenges Int @default(0)
+  finalScorePercent Float @default(0)
+  firstPassAccuracy Float @default(0)
+  pendingReviewCount Int @default(0)
+  gameCupCount Int @default(0)
+  starCount Int @default(0)
+  islandCupAwarded Boolean @default(false)
+  islandCupAwardedAt DateTime?
+  lastResumeStageId String?
+  lastResumeSceneId String?
+  lastResumeChallengeId String?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  completedAt DateTime?
+  
+  profile   PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  stageProgress StageProgress[]
+
+  @@unique([profileId, islandId])
+}
+
+model StageProgress {
+  id              String   @id @default(uuid())
+  islandProgressId String
+  stageId         String
+  status          String   @default("AVAILABLE")
+  
+  currentSceneId  String?
+  currentChallengeId String?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  islandProgress  IslandProgress @relation(fields: [islandProgressId], references: [id], onDelete: Cascade)
+  sceneProgress   SceneProgress[]
+
+  @@unique([islandProgressId, stageId])
+}
+
+model SceneProgress {
+  id              String   @id @default(uuid())
+  stageProgressId String
+  sceneId         String
+  status          String   @default("AVAILABLE")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  stageProgress   StageProgress @relation(fields: [stageProgressId], references: [id], onDelete: Cascade)
+
+  @@unique([stageProgressId, sceneId])
+}
+
+model ChallengeAttempt {
+  id             String   @id @default(uuid())
+  profileId      String
+  islandId       String
+  stageId        String
+  gameId         String?
+  challengeId    String
+  sceneId        String
+  state          String   @default("UNSEEN") // UNSEEN, IN_PROGRESS, INCORRECT_RETRY_AVAILABLE, SKIPPED_PENDING, CORRECT_SCORED
+  attemptCount   Int      @default(0)
+  hasSubmittedGradedAttempt Boolean @default(false)
+  firstAttemptCorrect Boolean?
+  earnedPoint   Boolean  @default(false)
+  earnedPointAt  DateTime?
+  skippedAt      DateTime?
+  resolvedAt     DateTime?
+  lastAnswerPayload String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  profile        PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, islandId, challengeId])
+}
+
+model PendingItem {
+  id             String   @id @default(uuid())
+  profileId      String
+  itemType       String   // e.g. "SKIPPED_CHALLENGE", "UNSEEN_STORY"
+  referenceId    String
+  resolved       Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  profile        PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+}
+
+model ResumeLocation {
+  id             String   @id @default(uuid())
+  profileId      String   @unique
+  islandId       String?
+  stageId        String?
+  sceneId        String?
+  urlPath        String?
+  updatedAt      DateTime @updatedAt
+
+  profile        PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+}
+
+model RewardLedger {
+  id             String   @id @default(uuid())
+  profileId      String
+  rewardType     String   // e.g. "CHALLENGE_TROPHY", "CHAPTER_CUP", "ISLAND_CUP", "STAR"
+  referenceId    String   // e.g. challengeId, chapterId, islandId
+  awardedAt      DateTime @default(now())
+
+  profile        PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, rewardType, referenceId])
+}
+
+model IdempotencyRecord {
+  id             String   @id @default(uuid())
+  profileId      String
+  actionKey      String
+  createdAt      DateTime @default(now())
+
+  profile        PlayerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, actionKey])
+}
