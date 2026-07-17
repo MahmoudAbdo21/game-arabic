@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { JourneyProgressHero } from './JourneyProgressHero';
 import { logoutProfile } from '@/features/player/actions';
 
-export function DashboardHeader({ profile }: { profile?: { id: string; name: string; avatarId?: string; avatarUrl?: string; } }) {
+export function DashboardHeader({ profile, metrics }: { profile?: { id: string; name: string; avatarId?: string; avatarUrl?: string; }, metrics?: any }) {
   const router = useRouter();
 
   const selectedPersona = PERSONAS.find(p => p.id === profile?.avatarId);
@@ -26,7 +26,7 @@ export function DashboardHeader({ profile }: { profile?: { id: string; name: str
         </div>
       </div>
 
-      <JourneyProgressHero />
+      <JourneyProgressHero metrics={metrics} />
 
       <div className="header-actions">
         <button 

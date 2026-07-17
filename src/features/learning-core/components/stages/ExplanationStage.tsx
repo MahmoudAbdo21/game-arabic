@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { submitStageProgress } from "@/features/learning-core/actions";
-import { ExplanationSceneSchema } from "../../data/schema";
+import { ExplanationSceneSchema, ExplanationPresentation } from "../../data/schema";
+import { ExplanationVisual } from "./ExplanationVisual";
 import { z } from "zod";
 import { TranscriptOverlay } from "../TranscriptOverlay";
 import styles from "./ExplanationStage.module.css";
@@ -15,6 +16,7 @@ interface ExplanationStageProps {
     sceneId: string;
     title: string;
     content: string;
+    presentation?: ExplanationPresentation;
   };
   profileId: string;
   nextRoute: string;
@@ -25,10 +27,11 @@ export function ExplanationStage({ islandId, scene, profileId, nextRoute, prevRo
   const router = useRouter();
   const [showTranscript, setShowTranscript] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [replayToken, setReplayToken] = useState(0);
   const { play, stop, enterManualMode } = useAudio();
   const isAutoModeRef = useRef<boolean>(true);
-  const activeTokenRef = useRef<number>(0);
 
+  // Single mount effect per route
   useEffect(() => {
     if (ExplanationFlow.isFreshVisit()) {
       ExplanationFlow.setAuto();
@@ -36,63 +39,66 @@ export function ExplanationStage({ islandId, scene, profileId, nextRoute, prevRo
     isAutoModeRef.current = ExplanationFlow.getMode() === 'AUTO';
     ExplanationFlow.setLastTimestamp();
 
-    activeTokenRef.current += 1;
-    const currentToken = activeTokenRef.current;
-
-    play(`${islandId}-${scene.sceneId}-audio`, {
-      ownerKey: scene.sceneId,
-      onEnded: () => {
-        if (currentToken === activeTokenRef.current && isAutoModeRef.current) {
-          handleNextAuto();
+    if (!scene.presentation) {
+      play(`${islandId}-${scene.sceneId}-audio`, {
+        ownerKey: scene.sceneId,
+        onEnded: () => {
+          if (isAutoModeRef.current) {
+            handleNextAuto();
+          }
         }
-      }
-    });
+      });
+    }
 
     return () => {
-      activeTokenRef.current += 1; // invalidate callbacks
       ExplanationFlow.setLastTimestamp();
+      stop();
     };
-  }, [islandId, scene.sceneId, play]);
+  }, [islandId, scene.sceneId]);
 
   const handleNextAuto = React.useCallback(async () => {
-    if (isProcessing) return;
-    setIsProcessing(true);
-    activeTokenRef.current += 1; // invalidate old callbacks just in case
-    try {
-      await submitStageProgress({
+    setIsProcessing(p => {
+      if (p) return true;
+      // Start navigation
+      submitStageProgress({
         islandId,
         stageId: scene.sceneId,
         status: 'COMPLETED'
+      }).finally(() => {
+        router.push(nextRoute);
       });
-      router.push(nextRoute);
-    } catch (e) {
-      console.error(e);
-      router.push(nextRoute);
-    }
-  }, [isProcessing, islandId, scene.sceneId, router, nextRoute]);
+      return true;
+    });
+  }, [islandId, scene.sceneId, router, nextRoute]);
 
-  const handleNext = async () => {
+  const handleNext = () => {
     stop();
-    await handleNextAuto();
+    handleNextAuto();
   };
 
   const handlePrevious = () => {
     if (!prevRoute) return;
-    stop();
-    ExplanationFlow.setManual();
-    isAutoModeRef.current = false;
-    activeTokenRef.current += 1;
-    router.push(prevRoute);
+    setIsProcessing(p => {
+      if (p) return true;
+      stop();
+      ExplanationFlow.setManual();
+      isAutoModeRef.current = false;
+      router.push(prevRoute);
+      return true;
+    });
   };
 
   const handleReplayCurrent = () => {
+    if (isProcessing) return;
     stop();
     ExplanationFlow.setManual();
     isAutoModeRef.current = false;
-    activeTokenRef.current += 1;
-    play(`${islandId}-${scene.sceneId}-audio`, {
-      ownerKey: scene.sceneId
-    });
+    setReplayToken(prev => prev + 1);
+    if (!scene.presentation) {
+      play(`${islandId}-${scene.sceneId}-audio`, {
+        ownerKey: scene.sceneId
+      });
+    }
   };
 
   return (
@@ -101,8 +107,19 @@ export function ExplanationStage({ islandId, scene, profileId, nextRoute, prevRo
       {/* Cinematic Background Layer */}
       <div 
         className={styles.backgroundLayer}
-        style={{ backgroundImage: `url('/images/islands/${islandId}/explanation_bg.png')` }}
+        style={{ backgroundImage: `url('${scene.presentation?.visualUrl || `/images/islands/${islandId}/explanation_bg.png`}')` }}
       />
+      {scene.presentation && (
+        <ExplanationVisual 
+          islandId={islandId}
+          sceneId={scene.sceneId}
+          presentation={scene.presentation} 
+          isAutoMode={isAutoModeRef.current}
+          onComplete={handleNextAuto}
+          replayToken={replayToken}
+          isCancelled={isProcessing}
+        />
+      )}
       <div className={styles.gradientOverlay} />
 
       {/* Top Header */}

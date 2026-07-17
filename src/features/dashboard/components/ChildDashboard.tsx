@@ -16,7 +16,7 @@ export function ChildDashboard({ initialProfile, metrics }: { initialProfile?: {
 
   return (
     <div className="dashboard-shell">
-      <DashboardHeader profile={initialProfile} />
+      <DashboardHeader profile={initialProfile} metrics={metrics || undefined} />
       <DashboardHUD profile={initialProfile} metrics={metrics || undefined} />
       <ArchipelagoMap profile={initialProfile} islandsCompleted={metrics?.islandsCompleted || 0} />
     </div>

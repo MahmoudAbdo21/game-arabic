@@ -1,0 +1,155 @@
+.visualContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15vh; /* Move container up by 15% of viewport to avoid dark panel */
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #d81b60;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wordArea {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+}
+
+.highlighted {
+  color: #e91e63;
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.4);
+  transition: color 0.3s ease;
+}
+
+.missingGap {
+  display: inline-block;
+  width: 1.5em;
+  border-bottom: 4px dashed #999;
+  margin: 0 5px;
+  position: relative;
+  height: 1em;
+}
+
+.missingGap.filledGap {
+  border-bottom-color: transparent;
+}
+
+.floatingLetter {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #e91e63;
+}
+
+.floatingLetter.dropped {
+  top: -15px; /* Adjust based on line height */
+  opacity: 1;
+}
+
+.completedGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: bold;
+  color: #4caf50;
+  text-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+  animation: pulse 1.5s infinite;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.connectedWordBase {
+  direction: rtl;
+  unicode-bidi: isolate;
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-variant-ligatures: normal;
+  display: inline-block;
+}
+
+.highlightMarker {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,30,99,0.5) 0%, rgba(233,30,99,0) 70%);
+  pointer-events: none;
+  animation: pulse 1.5s infinite;
+}
+
+.isolatedSoundFloating {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 4rem;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translate(-50%, 20px) scale(0.5); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+.segmentCard { width: 100px; height: 120px; background: white; border-radius: 12px; margin: 0 10px; display: flex; justify-content: center; align-items: center; font-size: 3rem; font-weight: bold; color: #d81b60; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.5s ease; opacity: 0; transform: translateY(-20px); }
+.segmentCard.visible { opacity: 1; transform: translateY(0); }
+.segmentContainer { display: flex; flex-direction: row; margin-top: 20px; }
+.shaddaContainer { display: flex; flex-direction: row-reverse; align-items: center; gap: 40px; width: 100%; justify-content: center; }
+.scalePan { display: flex; flex-direction: row; gap: 10px; background: rgba(255,255,255,0.5); padding: 20px; border-radius: 20px; min-width: 200px; justify-content: center; align-items: center; }
+.tanweenGlow { color: #ffeb3b; text-shadow: 0 0 15px rgba(255,235,59,0.8); animation: pulse 1.5s infinite; }
+.writingContainer { display: flex; flex-direction: row; gap: 40px; justify-content: center; }
+.pencilGlow { position: absolute; right: -40px; top: -40px; font-size: 4rem; animation: float 2s ease-in-out infinite; }
+@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }

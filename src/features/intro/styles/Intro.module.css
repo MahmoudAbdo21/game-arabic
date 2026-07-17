@@ -323,17 +323,19 @@
 
 .btnNext {
   height: 3rem;
-  background-image: linear-gradient(to right, var(--color-intro-primary), var(--color-intro-primary-hover));
+  background-color: var(--color-intro-primary);
+  border: 1px solid var(--color-intro-primary);
   font-weight: 900;
   color: #ffffff;
-  box-shadow: 0 5px 0 var(--color-intro-primary-hover);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
   transition: all 150ms ease;
+  padding: 0 1.5rem;
 }
 .btnNext:hover {
-  background-image: linear-gradient(to right, #5558E3, var(--color-intro-primary-hover));
+  background-color: #4F46E5;
 }
 .btnNext:active {
-  transform: translateY(4px);
+  transform: translateY(2px);
   box-shadow: none;
 }
 

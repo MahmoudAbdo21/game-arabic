@@ -174,89 +174,88 @@ const INTRO_SCENES: IntroScene[] = [
 export function IntroExperience({ onComplete }: IntroExperienceProps) {
   const [sceneIndex, setSceneIndex] = useState(0);
   const [leaving, setLeaving] = useState(false);
-  const completionStartedRef = useRef(false);
-  const completionTimeoutRef = useRef<number | null>(null);
+  const { play, stop, pause, resume, replay, isPlaying, enterManualMode, currentAudioId } = useAudio();
   
-  const { play, pause, resume, replay, isPlaying, isManualMode, enterManualMode, currentAudioId } = useAudio();
   const [hasStarted, setHasStarted] = useState(false);
   
-  const isManualModeRef = useRef(isManualMode);
-  useEffect(() => {
-    isManualModeRef.current = isManualMode;
-  }, [isManualMode]);
+  const activeTokenRef = useRef(0);
+  const timersRef = useRef<number[]>([]);
 
-  const [isPendingComplete, setIsPendingComplete] = useState(false);
-  const pendingCompletionRef = useRef(false);
-  const audioCompletedRef = useRef<boolean[]>(new Array(INTRO_SCENES.length).fill(false));
+  const clearTimers = useCallback(() => {
+    timersRef.current.forEach(window.clearTimeout);
+    timersRef.current = [];
+  }, []);
+
+  const cancelCurrentRun = useCallback(() => {
+    activeTokenRef.current += 1;
+    clearTimers();
+    stop();
+  }, [clearTimers, stop]);
 
   useEffect(() => {
     return () => {
-      if (completionTimeoutRef.current !== null) {
-        window.clearTimeout(completionTimeoutRef.current);
-      }
+      cancelCurrentRun();
     };
-  }, []);
+  }, [cancelCurrentRun]);
 
-  const completeIntro = useCallback(async () => {
-    if (leaving || completionStartedRef.current) return;
-    completionStartedRef.current = true;
+  const completeIntro = useCallback(() => {
+    if (leaving) return;
+    cancelCurrentRun();
     setLeaving(true);
-    completionTimeoutRef.current = window.setTimeout(onComplete, 200);
-  }, [leaving, onComplete]);
-
-  const goToNextSceneAuto = useCallback(() => {
-    if (sceneIndex >= INTRO_SCENES.length - 1) {
-      completeIntro();
-      return;
-    }
-    setSceneIndex((current) => Math.min(current + 1, INTRO_SCENES.length - 1));
-  }, [completeIntro, sceneIndex]);
+    const id = window.setTimeout(onComplete, 200);
+    timersRef.current.push(id);
+  }, [leaving, cancelCurrentRun, onComplete]);
 
   const goToNextSceneManual = useCallback(() => {
     enterManualMode();
     setHasStarted(true);
+    cancelCurrentRun();
+    
     if (sceneIndex >= INTRO_SCENES.length - 1) {
-      if (audioCompletedRef.current[sceneIndex]) {
-        completeIntro();
-      } else {
-        pendingCompletionRef.current = true;
-        setIsPendingComplete(true);
-      }
-      return;
+       completeIntro();
+       return;
     }
-    setSceneIndex((current) => Math.min(current + 1, INTRO_SCENES.length - 1));
-  }, [completeIntro, sceneIndex, enterManualMode]);
+    setSceneIndex((current) => current + 1);
+  }, [completeIntro, sceneIndex, enterManualMode, cancelCurrentRun]);
 
   const goToPreviousSceneManual = useCallback(() => {
     enterManualMode();
     setHasStarted(true);
-    setSceneIndex((current) => Math.max(current - 1, 0));
-  }, [enterManualMode]);
+    cancelCurrentRun();
+    
+    if (sceneIndex > 0) {
+      setSceneIndex((current) => current - 1);
+    }
+  }, [sceneIndex, enterManualMode, cancelCurrentRun]);
 
   // Audio orchestrator
   useEffect(() => {
-    if (hasStarted) {
-      audioCompletedRef.current[sceneIndex] = false;
+    if (hasStarted && !leaving) {
+      const currentToken = ++activeTokenRef.current;
+      
       play(`global-intro-intro-scene-${sceneIndex}`, {
+        ownerKey: `intro-${sceneIndex}`,
         onEnded: () => {
-          audioCompletedRef.current[sceneIndex] = true;
-          if (sceneIndex === INTRO_SCENES.length - 1 && pendingCompletionRef.current) {
-            completeIntro();
-          } else if (!isManualModeRef.current) {
-            goToNextSceneAuto();
+          if (activeTokenRef.current !== currentToken) return;
+          
+          if (sceneIndex === INTRO_SCENES.length - 1) {
+             completeIntro();
+          } else {
+             setSceneIndex(current => current + 1);
           }
         },
         onError: () => {
-          audioCompletedRef.current[sceneIndex] = true;
-          if (sceneIndex === INTRO_SCENES.length - 1 && pendingCompletionRef.current) {
-            completeIntro();
-          } else if (!isManualModeRef.current) {
-            goToNextSceneAuto();
+          if (activeTokenRef.current !== currentToken) return;
+          
+          if (sceneIndex === INTRO_SCENES.length - 1) {
+             completeIntro();
+          } else {
+             setSceneIndex(current => current + 1);
           }
         }
       });
     }
-  }, [sceneIndex, hasStarted, play, goToNextSceneAuto, completeIntro]);
+  }, [sceneIndex, hasStarted, leaving, play, completeIntro]);
 
   const onPlayToggle = useCallback(() => {
     if (!hasStarted) {
@@ -293,7 +292,7 @@ export function IntroExperience({ onComplete }: IntroExperienceProps) {
         onSkip={completeIntro}
         onPlayToggle={onPlayToggle}
         isPlaying={isPlaying && currentAudioId === `global-intro-intro-scene-${sceneIndex}`}
-        isPendingComplete={isPendingComplete}
+        isPendingComplete={false}
       />
     </div>
   );

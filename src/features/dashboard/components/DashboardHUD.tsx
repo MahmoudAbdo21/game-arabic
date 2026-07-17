@@ -5,14 +5,14 @@ import { useAudio } from '@/providers/AudioProvider';
 
 const toArabic = (num: number) => num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[parseInt(d)]);
 
-export function DashboardHUD({ profile, metrics }: { profile?: { id: string; name: string; avatarUrl?: string; }; metrics?: { islandsCompleted?: number; totalStars?: number; nextUnlockId?: string | null; islandsTotal?: number; levelsTotal?: number; levelsCompleted?: number; challengesTotal?: number; challengesCompleted?: number; totalBadges?: number; } }) {
+export function DashboardHUD({ profile, metrics }: { profile?: { id: string; name: string; avatarUrl?: string; }; metrics?: { islandsCompleted?: number; totalStars?: number; nextUnlockId?: string | null; islandsTotal?: number; gameCupsTotal?: number; gameCupsEarned?: number; challengesTotal?: number; challengesCompleted?: number; totalBadges?: number; } }) {
   const { replay } = useAudio();
   
   const islandsTotal = metrics?.islandsTotal || 4;
   const islandsCompleted = metrics?.islandsCompleted || 0;
   
-  const levelsTotal = metrics?.levelsTotal || 18;
-  const levelsCompleted = metrics?.levelsCompleted || 0;
+  const gameCupsTotal = metrics?.gameCupsTotal || 23;
+  const gameCupsEarned = metrics?.gameCupsEarned || 0;
   
   const challengesTotal = metrics?.challengesTotal || 65;
   const challengesCompleted = metrics?.challengesCompleted || 0;
@@ -36,7 +36,7 @@ export function DashboardHUD({ profile, metrics }: { profile?: { id: string; nam
       <div className="hud-module">
         <div className="hud-icon">🎮</div>
         <div className="hud-label">كؤوس الألعاب</div>
-        <div className="hud-value"><bdi>{toArabic(levelsCompleted)}</bdi> / <bdi>{toArabic(levelsTotal)}</bdi></div>
+        <div className="hud-value"><bdi>{toArabic(gameCupsEarned)}</bdi> / <bdi>{toArabic(gameCupsTotal)}</bdi></div>
       </div>
       
       <div className="hud-module">

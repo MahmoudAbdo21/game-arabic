@@ -7,11 +7,10 @@ import { ISLANDS } from '../config/islands';
 // Helper to convert English numbers to Arabic-Indic
 const toArabic = (num: number) => num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[parseInt(d)]);
 
-export function JourneyProgressHero() {
+export function JourneyProgressHero({ metrics }: { metrics?: any }) {
   const totalIslands = ISLANDS.length;
-  // Progress is firmly Truthful Zero per requirements
-  const completedIslands = 0; 
-  const progressPercent = 0;
+  const completedIslands = metrics?.islandsCompleted || 0; 
+  const progressPercent = metrics?.journeyProgressPercent || 0;
 
   return (
     <div className="journey-progress-hero">

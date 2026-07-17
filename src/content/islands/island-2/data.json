@@ -37,38 +37,116 @@
   "explanationScenes": [
     {
       "sceneId": "l2-exp-01",
-      "title": "مصابيح الحركات",
-      "content": "الفتحة والضمة والكسرة في بداية الكلمات."
+      "title": "أصواتنا الجميلة",
+      "content": "الحركات تجعل أصواتنا تتغيّر.",
+      "presentation": {
+        "type": "SHORT_VOWEL_INTRO",
+        "visualUrl": "/images/islands/island-2/l2-exp-01-visual.png",
+        "audioIds": ["island-2-l2-exp-01-audio"],
+        "animationSteps": ["show_amira", "show_fatha_card", "show_damma_card", "show_kasra_card"]
+      }
     },
     {
       "sceneId": "l2-exp-02",
-      "title": "عدسة المقاطع",
-      "content": "تقطيع الكلمة إلى أجزاء صوتية وعدها."
+      "title": "الفتحة",
+      "content": "الفتحة فوق الحرف تجعل صوته: سَ.",
+      "presentation": {
+        "type": "SHORT_VOWEL_EXAMPLE",
+        "visualUrl": "/images/islands/island-2/l2-exp-02-visual.png",
+        "targetWord": "سَارَة",
+        "targetLetter": "س",
+        "targetMark": "َ",
+        "isolatedSound": "سَ",
+        "audioIds": ["island-2-l2-exp-02-audio", "island-2-l2-exp-02-isolated"],
+        "animationSteps": ["show_word", "highlight_letter", "show_mark", "play_isolated", "show_completed"]
+      }
     },
     {
       "sceneId": "l2-exp-03",
-      "title": "ورشة المكعبات",
-      "content": "ترتيب المقاطع من اليمين إلى اليسار لتكوين الكلمة."
+      "title": "الضمة",
+      "content": "الضمة فوق الحرف تجعل صوته مضمومًا.",
+      "presentation": {
+        "type": "SHORT_VOWEL_TWO_PHASE_EXAMPLE",
+        "visualUrl": "/images/islands/island-2/l2-exp-03-visual.png",
+        "phases": [
+          {
+            "targetWord": "أُمِيرَة",
+            "targetLetter": "أ",
+            "targetMark": "ُ",
+            "isolatedSound": "أُ",
+            "audioIds": ["island-2-l2-exp-03-phaseA-audio", "island-2-l2-exp-03-phaseA-isolated"],
+            "animationSteps": ["show_word", "highlight_letter", "show_mark", "play_isolated", "show_completed"]
+          },
+          {
+            "targetWord": "مُبْتَسِمًا",
+            "targetLetter": "م",
+            "targetMark": "ُ",
+            "isolatedSound": "مُ",
+            "audioIds": ["island-2-l2-exp-03-phaseB-audio", "island-2-l2-exp-03-phaseB-isolated"],
+            "animationSteps": ["show_word", "highlight_letter", "show_mark", "play_isolated", "show_completed"]
+          }
+        ]
+      }
     },
     {
       "sceneId": "l2-exp-04",
-      "title": "بوابة البداية",
-      "content": "التعرف إلى الكلمات التي تبدأ بالحرف نفسه."
+      "title": "الكسرة",
+      "content": "الكسرة تحت الحرف تجعل صوته: كِ.",
+      "presentation": {
+        "type": "SHORT_VOWEL_EXAMPLE",
+        "visualUrl": "/images/islands/island-2/l2-exp-04-visual.png",
+        "targetWord": "كِتَاب",
+        "targetLetter": "ك",
+        "targetMark": "ِ",
+        "isolatedSound": "كِ",
+        "audioIds": ["island-2-l2-exp-04-audio", "island-2-l2-exp-04-isolated"],
+        "animationSteps": ["show_word", "highlight_letter", "show_mark", "play_isolated", "show_completed"]
+      }
     },
     {
       "sceneId": "l2-exp-05",
-      "title": "ألبوم الصور",
-      "content": "مطابقة الصورة مع الكلمة الصحيحة."
+      "title": "كلماتنا المفقودة",
+      "content": "نضيف الحرف الناقص في أول الكلمة.",
+      "presentation": {
+        "type": "MISSING_LETTER",
+        "visualUrl": "/images/islands/island-2/l2-exp-05-visual.png",
+        "before": "",
+        "after": "مِيرَة",
+        "missingLetter": "أُ",
+        "completedWord": "أُمِيرَة",
+        "audioIds": ["island-2-l2-exp-05-audio", "island-2-l2-exp-05-completed"],
+        "animationSteps": ["show_gap", "float_letter", "show_completed"]
+      }
     },
     {
       "sceneId": "l2-exp-06",
-      "title": "قطار الحرف الناقص",
-      "content": "إكمال الكلمة بالحرف الصحيح."
+      "title": "حرف في الوسط",
+      "content": "نضع الحرف الناقص في وسط الكلمة.",
+      "presentation": {
+        "type": "MISSING_LETTER",
+        "visualUrl": "/images/islands/island-2/l2-exp-06-visual.png",
+        "before": "مُ",
+        "after": "لِّمَة",
+        "missingLetter": "عَ",
+        "completedWord": "مُعَلِّمَة",
+        "audioIds": ["island-2-l2-exp-06-audio", "island-2-l2-exp-06-completed"],
+        "animationSteps": ["show_gap", "float_letter", "show_completed"]
+      }
     },
     {
       "sceneId": "l2-exp-07",
-      "title": "عدسة المختلف",
-      "content": "اكتشاف الكلمة المختلفة في الحرف أو الصوت الأول."
+      "title": "حرف في النهاية",
+      "content": "نضيف الحرف الناقص في نهاية الكلمة.",
+      "presentation": {
+        "type": "MISSING_LETTER",
+        "visualUrl": "/images/islands/island-2/l2-exp-07-visual.png",
+        "before": "مَنْزِ",
+        "after": "",
+        "missingLetter": "ل",
+        "completedWord": "مَنْزِل",
+        "audioIds": ["island-2-l2-exp-07-audio", "island-2-l2-exp-07-completed"],
+        "animationSteps": ["show_gap", "float_letter", "show_completed"]
+      }
     }
   ],
   "games": [

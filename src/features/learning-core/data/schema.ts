@@ -30,10 +30,89 @@ export const GameSchema = z.object({
   challenges: z.array(ChallengeSchema)
 });
 
+export const ExplanationPresentationSchema = z.discriminatedUnion("type", [
+  z.object({
+    type: z.literal("SHORT_VOWEL_INTRO"),
+    visualUrl: z.string(),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("SHORT_VOWEL_EXAMPLE"),
+    visualUrl: z.string(),
+    targetWord: z.string(),
+    targetLetter: z.string(),
+    targetMark: z.string(),
+    isolatedSound: z.string(),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("SHORT_VOWEL_TWO_PHASE_EXAMPLE"),
+    visualUrl: z.string(),
+    phases: z.array(z.object({
+      targetWord: z.string(),
+      targetLetter: z.string(),
+      targetMark: z.string(),
+      isolatedSound: z.string(),
+      audioIds: z.array(z.string()),
+      animationSteps: z.array(z.string())
+    }))
+  }),
+  z.object({
+    type: z.literal("MISSING_LETTER"),
+    visualUrl: z.string(),
+    before: z.string(),
+    after: z.string(),
+    missingLetter: z.string(),
+    completedWord: z.string(),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("WORD_SEGMENTATION"),
+    visualUrl: z.string(),
+    completedWord: z.string(),
+    segments: z.array(z.string()),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("SOUND_MERGE"),
+    visualUrl: z.string(),
+    segments: z.array(z.string()),
+    completedWord: z.string(),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("SHADDA_BALANCE"),
+    visualUrl: z.string(),
+    completedWord: z.string(),
+    shaddaParts: z.array(z.string()),
+    segments: z.array(z.string()),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  }),
+  z.object({
+    type: z.literal("SOUND_TO_WRITING"),
+    visualUrl: z.string(),
+    segments: z.array(z.string()),
+    baseWord: z.string(),
+    completedWord: z.string(),
+    hasTanween: z.boolean().optional(),
+    audioIds: z.array(z.string()),
+    animationSteps: z.array(z.string())
+  })
+]);
+
+export type ExplanationPresentation = z.infer<typeof ExplanationPresentationSchema>;
+
 export const ExplanationSceneSchema = z.object({
   sceneId: z.string(),
   title: z.string(),
-  content: z.string()
+  content: z.string(),
+  presentation: ExplanationPresentationSchema.optional()
 });
 
 export const LessonDataSchema = z.object({

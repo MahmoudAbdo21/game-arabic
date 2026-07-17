@@ -32,17 +32,71 @@
     {
       "sceneId": "l3-exp-01",
       "title": "آلة تقطيع الكلمات",
-      "content": "عرض الكلمة في أجزاء صوتية مع إضاءة الجزء المنطوق مستقبلًا."
+      "content": "نُقَطِّعُ الكَلِمَةَ إِلَى ثَلَاثَةِ مَقَاطِعَ صَوْتِيَّةٍ.",
+      "presentation": {
+        "type": "WORD_SEGMENTATION",
+        "visualUrl": "/images/islands/island-3/l3-exp-01-visual.png",
+        "completedWord": "أَرْنَبُ",
+        "segments": ["أَرْ", "نَ", "بُ"],
+        "audioIds": [
+          "island-3-l3-exp-01-audio",
+          "island-3-l3-exp-01-segments"
+        ],
+        "animationSteps": []
+      }
     },
     {
       "sceneId": "l3-exp-02",
-      "title": "قطار الدمج",
-      "content": "ترتيب المقاطع لتكوين كلمة مفهومة."
+      "title": "وعاء الجرعة السحرية",
+      "content": "نَجْمَعُ المَقَاطِعَ لِنُكَوِّنَ كَلِمَةً وَاحِدَةً.",
+      "presentation": {
+        "type": "SOUND_MERGE",
+        "visualUrl": "/images/islands/island-3/l3-exp-02-visual.png",
+        "segments": ["نَمْ", "لَ", "ةٌ"],
+        "completedWord": "نَمْلَةٌ",
+        "audioIds": [
+          "island-3-l3-exp-02-audio",
+          "island-3-l3-exp-02-segments",
+          "island-3-l3-exp-02-completed"
+        ],
+        "animationSteps": []
+      }
     },
     {
       "sceneId": "l3-exp-03",
-      "title": "مغناطيس الصورة والكلمة",
-      "content": "مطابقة الصورة الطبيعية بالكلمة المكتوبة."
+      "title": "ميزان المقاطع الثقيلة",
+      "content": "الحَرْفُ المُشَدَّدُ يَتَكَوَّنُ مِنْ حَرْفَيْنِ.",
+      "presentation": {
+        "type": "SHADDA_BALANCE",
+        "visualUrl": "/images/islands/island-3/l3-exp-03-visual.png",
+        "completedWord": "قَوِيّ",
+        "shaddaParts": ["يْ", "يُ"],
+        "segments": ["قَ", "وِ", "يْ", "يُ"],
+        "audioIds": [
+          "island-3-l3-exp-03-audio",
+          "island-3-l3-exp-03-segments"
+        ],
+        "animationSteps": []
+      }
+    },
+    {
+      "sceneId": "l3-exp-04",
+      "title": "القلم الطائر",
+      "content": "نَسْمَعُ الأَصْوَاتَ، ثُمَّ نَكْتُبُهَا كَلِمَةً.",
+      "presentation": {
+        "type": "SOUND_TO_WRITING",
+        "visualUrl": "/images/islands/island-3/l3-exp-04-visual.png",
+        "segments": ["عَ", "جِ", "ي", "بْ"],
+        "baseWord": "عَجِيب",
+        "completedWord": "عَجِيبٌ",
+        "hasTanween": true,
+        "audioIds": [
+          "island-3-l3-exp-04-audio",
+          "island-3-l3-exp-04-sounds",
+          "island-3-l3-exp-04-completed"
+        ],
+        "animationSteps": []
+      }
     }
   ],
   "games": [
